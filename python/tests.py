@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import unittest, percentToFriendlyString
+import unittest, probabilityToFriendlyString
 
 class TestPercentToFriendlyString(unittest.TestCase):
 	def test_allCases(self):
@@ -14,12 +14,12 @@ class TestPercentToFriendlyString(unittest.TestCase):
 			return
 		parts = line.split(',')
 		if len(parts) == 3:
-			expected = percentToFriendlyString.FriendlyProbabilityString(int(parts[1]), int(parts[2]))
+			expected = probabilityToFriendlyString.FriendlyProbabilityString(int(parts[1]), int(parts[2]))
 		elif len(parts) == 4:
-			expected = percentToFriendlyString.FriendlyProbabilityString(int(parts[1]), int(parts[2]), parts[3])
+			expected = probabilityToFriendlyString.FriendlyProbabilityString(int(parts[1]), int(parts[2]), parts[3])
 		else:
 			self.fail("Line badly formatted: " + line)
-		actual = percentToFriendlyString.FriendlyProbabilityString.fromProbability(parts[0])
+		actual = probabilityToFriendlyString.FriendlyProbabilityString.fromProbability(parts[0])
 		self.assertEqual(expected, actual, "Called on {0} (line {1})".format(parts[0], lineNumber))
 
 
