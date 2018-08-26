@@ -14,12 +14,12 @@ class TestPercentToFriendlyString(unittest.TestCase):
 			return
 		parts = line.split(',')
 		if len(parts) == 3:
-			expected = percentToFriendlyString.FriendlyPercentString(int(parts[1]), int(parts[2]))
+			expected = percentToFriendlyString.FriendlyProbabilityString(int(parts[1]), int(parts[2]))
 		elif len(parts) == 4:
-			expected = percentToFriendlyString.FriendlyPercentString(int(parts[1]), int(parts[2]), parts[3])
+			expected = percentToFriendlyString.FriendlyProbabilityString(int(parts[1]), int(parts[2]), parts[3])
 		else:
 			self.fail("Line badly formatted: " + line)
-		actual = percentToFriendlyString.percentToFriendlyString(parts[0])
+		actual = percentToFriendlyString.FriendlyProbabilityString.fromProbability(parts[0])
 		self.assertEqual(expected, actual, "Called on {0} (line {1})".format(parts[0], lineNumber))
 
 

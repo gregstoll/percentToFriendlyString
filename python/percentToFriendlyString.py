@@ -1,4 +1,4 @@
-class FriendlyPercentString:
+class FriendlyProbabilityString:
 	def __init__(self, numerator, denominator, friendlyString=None):
 		self.numerator = numerator
 		self.denominator = denominator
@@ -12,10 +12,13 @@ class FriendlyPercentString:
 	def __repr__(self):
 		return self.__str__()
 
-def percentToFriendlyString(s):
-	f = float(s)
-	if (f == 0):
-		return FriendlyPercentString(0, 1)
-	if (f == 1):
-		return FriendlyPercentString(1, 1)
-	return FriendlyPercentString(0, 1)
+	@staticmethod
+	def fromProbability(s):
+		f = float(s)
+		if (f < 0 or f > 1):
+			raise
+		if (f == 0):
+			return FriendlyProbabilityString(0, 1)
+		if (f == 1):
+			return FriendlyProbabilityString(1, 1)
+		return FriendlyProbabilityString(0, 1)
