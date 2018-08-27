@@ -3,7 +3,7 @@ import unittest, probabilityToFriendlyString
 
 class TestPercentToFriendlyString(unittest.TestCase):
 	def test_allCases(self):
-		with open('../testcases.txt', 'r') as f:
+		with open('../testCases.txt', 'r') as f:
 			lineNumber = 0
 			for line in f.readlines():
 				lineNumber += 1
@@ -15,12 +15,12 @@ class TestPercentToFriendlyString(unittest.TestCase):
 			return
 		parts = line.split(',')
 		if len(parts) == 3:
-			expected = probabilityToFriendlyString.FriendlyProbabilityString(int(parts[1]), int(parts[2]))
+			expected = probabilityToFriendlyString.FriendlyProbability(int(parts[1]), int(parts[2]))
 		elif len(parts) == 4:
-			expected = probabilityToFriendlyString.FriendlyProbabilityString(int(parts[1]), int(parts[2]), parts[3])
+			expected = probabilityToFriendlyString.FriendlyProbability(int(parts[1]), int(parts[2]), parts[3])
 		else:
 			self.fail("Line badly formatted: {0} (line {1})".format(line.strip(), lineNumber))
-		actual = probabilityToFriendlyString.FriendlyProbabilityString.fromProbability(float(parts[0]))
+		actual = probabilityToFriendlyString.FriendlyProbability.fromProbability(float(parts[0]))
 		self.assertEqual(expected, actual, "Called on {0} (line {1})".format(parts[0], lineNumber))
 
 

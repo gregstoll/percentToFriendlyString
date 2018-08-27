@@ -11,7 +11,7 @@ class CachedStaticProperty:
         setattr(owner, self.func.__name__, result)
         return result
 
-class FriendlyProbabilityString:
+class FriendlyProbability:
 	def __init__(self, numerator, denominator, friendlyString=None):
 		self.numerator = numerator
 		self.denominator = denominator
@@ -45,18 +45,18 @@ class FriendlyProbabilityString:
 		if (f < 0 or f > 1):
 			raise
 		if (f == 0):
-			return FriendlyProbabilityString(0, 1)
+			return FriendlyProbability(0, 1)
 		if (f == 1):
-			return FriendlyProbabilityString(1, 1)
+			return FriendlyProbability(1, 1)
 		if (f > .99):
-			return FriendlyProbabilityString(99, 100, ">99 in 100")
+			return FriendlyProbability(99, 100, ">99 in 100")
 		if (f < .01):
-			return FriendlyProbabilityString(1, 100, "<1 in 100")
+			return FriendlyProbability(1, 100, "<1 in 100")
 
-		data = FriendlyProbabilityString._fractionsData
+		data = FriendlyProbability._fractionsData
 		# index of the greatest element <= f
 		left = bisect.bisect_left(data, (f, 1000000, 1000000)) - 1
 		if (f - data[left][0] < data[left+1][0] - f):
-			return FriendlyProbabilityString(data[left][1], data[left][2])
+			return FriendlyProbability(data[left][1], data[left][2])
 		else:
-			return FriendlyProbabilityString(data[left+1][1], data[left+1][2])
+			return FriendlyProbability(data[left+1][1], data[left+1][2])
