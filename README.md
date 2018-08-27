@@ -1,8 +1,8 @@
 # probabilityToFriendlyString
 
-**Python 3**: done
+**Python 3**: done (requires Python 3.5 or above)
 
-**Javascript**: not started
+**Javascript**: done (ES6, tests use node.js)
 
 **C#**: not started
 
