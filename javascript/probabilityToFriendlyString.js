@@ -91,4 +91,8 @@ function initializeFractionsData() {
 }
 initializeFractionsData();
 
-module.exports.FriendlyProbability = FriendlyProbability;
+// Make this able to be consumed without node.js
+if (typeof module !== 'undefined')
+{
+    module.exports.FriendlyProbability = FriendlyProbability;
+}
