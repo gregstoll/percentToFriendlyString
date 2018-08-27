@@ -1,3 +1,16 @@
+import bisect, math
+
+class CachedStaticProperty:
+    """Works like @property and @staticmethod combined"""
+
+    def __init__(self, func):
+        self.func = func
+
+    def __get__(self, inst, owner):
+        result = self.func()
+        setattr(owner, self.func.__name__, result)
+        return result
+
 class FriendlyProbabilityString:
 	def __init__(self, numerator, denominator, friendlyString=None):
 		self.numerator = numerator
@@ -12,13 +25,38 @@ class FriendlyProbabilityString:
 	def __repr__(self):
 		return self.__str__()
 
+	@CachedStaticProperty
+	def _fractionsData():
+		data = []
+		def addFraction(numerator, denominator):
+			data.append((float(numerator)/denominator, numerator, denominator))
+		for d in range(2, 11):
+			for n in range(1, d):
+				if (math.gcd(n, d) == 1):
+					addFraction(n, d)
+		for d in [15, 20, 30, 40, 50, 60, 80, 100]:
+			addFraction(1, d)
+			addFraction(d-1, d)
+		data.sort()
+		return data
+
 	@staticmethod
-	def fromProbability(s):
-		f = float(s)
+	def fromProbability(f):
 		if (f < 0 or f > 1):
 			raise
 		if (f == 0):
 			return FriendlyProbabilityString(0, 1)
 		if (f == 1):
 			return FriendlyProbabilityString(1, 1)
-		return FriendlyProbabilityString(0, 1)
+		if (f > .99):
+			return FriendlyProbabilityString(99, 100, ">99 in 100")
+		if (f < .01):
+			return FriendlyProbabilityString(1, 100, "<1 in 100")
+
+		data = FriendlyProbabilityString._fractionsData
+		# index of the greatest element <= f
+		left = bisect.bisect_left(data, (f, 1000000, 1000000)) - 1
+		if (f - data[left][0] < data[left+1][0] - f):
+			return FriendlyProbabilityString(data[left][1], data[left][2])
+		else:
+			return FriendlyProbabilityString(data[left+1][1], data[left+1][2])
