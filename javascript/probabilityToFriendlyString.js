@@ -48,7 +48,7 @@ class FriendlyProbability {
         let data = FriendlyProbability._fractionsData;
         let right = binarySearch(data, f);
         let left = right - 1;
-        if (f - data[left][0] < data[right][0] - f) {
+        if (left >= 0 && f - data[left][0] < data[right][0] - f) {
             return new FriendlyProbability(data[left][1], data[left][2]);
         }
         else {

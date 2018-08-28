@@ -56,7 +56,7 @@ class FriendlyProbability:
 		data = FriendlyProbability._fractionsData
 		# index of the greatest element <= f
 		left = bisect.bisect_left(data, (f, 1000000, 1000000)) - 1
-		if (f - data[left][0] < data[left+1][0] - f):
+		if (left == len(data) - 1 or (left >= 0 and f - data[left][0] < data[left+1][0] - f)):
 			return FriendlyProbability(data[left][1], data[left][2])
 		else:
 			return FriendlyProbability(data[left+1][1], data[left+1][2])
