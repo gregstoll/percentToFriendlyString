@@ -7,19 +7,52 @@
 
         <!--#include virtual="/bootstraphead.html"-->
         <script src="probabilityToFriendlyString.js"></script>
-
     </head>
     <body>
   <!--#include virtual="/navbar.html"-->
         <div class="container">
         <h1>Probability to Friendly String</h1>
-        <p><a href="#about">About this project</a></p>
-        <span id="test"></span>
+        <p>Make probabilities more intuitive by converting them to odds!</p>
+        <h2>Examples</h2>
+        <table>
+            <tbody>
+                <tr><td>72.3%</td><td style="padding-left: 15px; padding-right: 15px;">=&gt;</td><td style="font-weight: bold;" id="demo723"></td></tr>
+                <tr><td>97.2%</td><td style="padding-left: 15px; padding-right: 15px;">=&gt;</td><td style="font-weight: bold;" id="demo972"></td></tr>
+                <tr><td><input type="text" size="3" id="demoInput">%</td><td style="padding-left: 15px; padding-right: 15px;">=&gt;</td><td style="font-weight: bold;" id="demoOutput"></td></tr>
+            </tbody>
+        </table>
+        <h2>Languages</h2>
+        <p>Available in Javascript, Python, and (coming soon!) C# from the <a href="https://github.com/gregstoll/probabilityToFriendlyString">GitHub page</a>.</p>
     </div>
     <script>
-        document.getElementById("test").innerHTML = FriendlyProbability.fromProbability(0.723).friendlyString;
+
+        document.getElementById("demo723").innerText = FriendlyProbability.fromProbability(0.723).friendlyString;
+        document.getElementById("demo972").innerText = FriendlyProbability.fromProbability(0.972).friendlyString;
+        //document.getElementById("test").innerText = FriendlyProbability.fromProbability(0.723).friendlyString;
+        document.addEventListener('DOMContentLoaded',function() {
+                document.getElementById('demoInput').oninput=changeDemoInput;
+                let input = document.getElementById('demoInput').value;
+                if (input.trim().length > 0) {
+                    updateDemoOutput(input);
+                }
+        },false);
+        function changeDemoInput(event) {
+            updateDemoOutput(this.value);
+        }
+        function updateDemoOutput(rawInput) {
+            let input = rawInput.trim();
+            let target = document.getElementById('demoOutput');
+            try
+            {
+                let f = parseFloat(input) / 100;
+                target.innerText = FriendlyProbability.fromProbability(f).friendlyString;
+            }
+            catch (error) {
+                target.innerText = "Error: " + error;
+            }
+
+        }
     </script>
     <a href="https://github.com/gregstoll/probabilityToFriendlyString"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
     </body>
 </html>
-
