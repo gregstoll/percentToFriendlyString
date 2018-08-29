@@ -1,4 +1,4 @@
-Requires .NET Standard 2.0. Package on NuGet: [ProbabilityToFriendlyString](https://www.nuget.org/packages/ProbabilityToFriendlyString/)
+Package on NuGet: [ProbabilityToFriendlyString](https://www.nuget.org/packages/ProbabilityToFriendlyString/).  Requires .NET Standard 2.0. 
 
 Usage:
 
