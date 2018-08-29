@@ -9,4 +9,4 @@ Usage:
 - `numerator`: the numerator of the probability (in this case 5)
 - `denominator`: the denominator of the probability (in this case 7)
 
-Note that passing a value less than 0 or greater than 1 to `FriendlyProbability.fromProbability` will throw an Error.
+Note that passing a value less than 0 or greater than 1 to `FriendlyProbability.fromProbability()` will throw an Error.
