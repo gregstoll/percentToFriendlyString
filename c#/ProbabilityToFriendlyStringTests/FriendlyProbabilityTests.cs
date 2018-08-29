@@ -48,9 +48,10 @@ namespace Gregstoll.ProbabilityToFriendlyString
                 path = Path.GetDirectoryName(path);
             }
             var lines = File.ReadAllLines(testCasesPath);
-            int lineNumber = 1;
+            int lineNumber = 0;
             foreach (string rawLine in lines)
             {
+                ++lineNumber;
                 string line = rawLine.Trim();
                 if (line.StartsWith("#"))
                 {
@@ -70,7 +71,6 @@ namespace Gregstoll.ProbabilityToFriendlyString
                 {
                     throw new InvalidDataException(string.Format("line improperly formatted (line {0}: {1}", lineNumber, line));
                 }
-                ++lineNumber;
             }
 
             return testCases.Select(tc => new object[] { tc });
