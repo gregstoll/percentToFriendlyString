@@ -43,7 +43,7 @@ class FriendlyProbability:
 	@staticmethod
 	def fromProbability(f):
 		if (f < 0 or f > 1):
-			raise
+			raise ValueError("probability is less than 0 or greater than 1")
 		if (f == 0):
 			return FriendlyProbability(0, 1)
 		if (f == 1):
