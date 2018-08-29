@@ -1,0 +1,20 @@
+{
+  "name": "probability-to-friendly-string",
+  "version": "1.0.0",
+  "description": "Make probabilities more intuitive by converting them to odds. (i.e. 72.3% becomes \"5 in 7\")",
+  "main": "probabilityToFriendlyString.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregstoll/probabilityToFriendlyString.git"
+  },
+  "keywords": [
+    "probability",
+    "odds"
+  ],
+  "author": "Greg Stoll <greg@gregstoll.com> (https://gregstoll.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gregstoll/probabilityToFriendlyString/issues"
+  },
+  "homepage": "https://github.com/gregstoll/probabilityToFriendlyString#readme"
+}
