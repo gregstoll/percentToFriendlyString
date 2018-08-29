@@ -2,7 +2,7 @@
 
 Make probabilities more intuitive by converting them to odds. (i.e. 72.3% becomes "5 in 7")
 
-[Live demo here](https://gregstoll.com/probabilityToFriendlyString/)
+[Live demo here](https://gregstoll.github.io/probabilityToFriendlyString/)
 
 **Python 3**: done (requires Python 3.5 or above)
 
