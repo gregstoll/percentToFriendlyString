@@ -1,4 +1,4 @@
-Requires ES6, can be used with or without node.js.  Package on npm: [probability-to-friendly-string](https://www.npmjs.com/package/probability-to-friendly-string)
+Package on npm: [probability-to-friendly-string](https://www.npmjs.com/package/probability-to-friendly-string).  Requires ES6, can be used with or without node.js.
 
 Usage:
 
