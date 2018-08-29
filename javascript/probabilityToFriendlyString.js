@@ -82,7 +82,7 @@ function initializeFractionsData() {
             }
         }
     }
-    for (let d of [15, 20, 30, 40, 50, 60, 80, 100]) {
+    for (let d of [12, 15, 20, 30, 40, 50, 60, 80, 100]) {
         addFraction(1, d);
         addFraction(d - 1, d);
     }
