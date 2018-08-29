@@ -34,7 +34,7 @@ class FriendlyProbability:
 			for n in range(1, d):
 				if (math.gcd(n, d) == 1):
 					addFraction(n, d)
-		for d in [15, 20, 30, 40, 50, 60, 80, 100]:
+		for d in [12, 15, 20, 30, 40, 50, 60, 80, 100]:
 			addFraction(1, d)
 			addFraction(d-1, d)
 		data.sort()

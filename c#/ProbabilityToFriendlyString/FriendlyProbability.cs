@@ -55,7 +55,7 @@ namespace Gregstoll.ProbabilityToFriendlyString
                     }
                 }
             }
-            foreach (byte b in new byte[] { 15, 20, 30, 40, 50, 60, 80, 100 })
+            foreach (byte b in new byte[] { 12, 15, 20, 30, 40, 50, 60, 80, 100 })
             {
                 AddFraction(1, b);
                 AddFraction((byte)(b - 1), b);
