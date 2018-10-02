@@ -1,3 +1,5 @@
+package com.gregstoll.probabilityToFriendlyString;
+
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
