@@ -1,0 +1,44 @@
+<project name="project" default="tests">
+    <path id="junit">
+        <fileset dir="/usr/share/java" includes="junit4.jar"/>
+    </path> 
+    <property name="main.src.dir"     value="src"/>
+    <property name="tests.src.dir"     value="tests"/>
+    <property name="build.dir"   value="build"/>
+    <property name="main.build.dir" value="${build.dir}/main"/>
+    <property name="tests.build.dir" value="${build.dir}/tests"/>
+    <property name="jar.dir"     value="${build.dir}/jar"/>
+
+    <target name="tests" depends="compileTests" description="run tests">
+        <junit printsummary="on">
+            <classpath>
+                <path refid="junit"/>
+                <pathelement path="${main.build.dir}"/>
+                <pathelement path="${tests.build.dir}"/>
+            </classpath>
+            <formatter type="brief" usefile="false"/>
+            <batchtest fork="on">
+                <fileset dir="${tests.src.dir}" includes="**/*.java"/>
+            </batchtest>
+        </junit>
+    </target>
+    <target name="jar" depends="compile" description="make a jar file">
+        <jar destfile="${jar.dir}/ProbabilityToFriendlyString.jar" basedir="${main.build.dir}"/>
+    </target>
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+    <target name="compileTests" depends="compile">
+        <mkdir dir="${tests.build.dir}"/>
+        <javac srcdir="${tests.src.dir}" destdir="${tests.build.dir}" includeantruntime="false">
+            <classpath>
+                <path refid="junit"/>
+                <pathelement path="${main.build.dir}"/>
+            </classpath>
+        </javac>
+    </target>
+    <target name="compile">
+        <mkdir dir="${main.build.dir}"/>
+        <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false"/>
+    </target>
+</project>
