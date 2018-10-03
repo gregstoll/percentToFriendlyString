@@ -19,6 +19,23 @@ public class FriendlyProbability {
 
     public static FriendlyProbability fromProbability(double prob) {
         //TODO implement this
+        if (prob < 0 || prob > 1) {
+            throw new IllegalArgumentException("probability must be between 0 and 1!");
+        }
+        if (prob == 0) {
+            return new FriendlyProbability((byte)0, (byte)1);
+        }
+        if (prob == 1) {
+            return new FriendlyProbability((byte)1, (byte)1);
+        }
+        if (prob > 0.99) {
+            return new FriendlyProbability((byte)99, (byte)100, ">99 in 100");
+        }
+        if (prob < 0.01) {
+            return new FriendlyProbability((byte)1, (byte)100, "<1 in 100");
+        }
+
+ 
         return new FriendlyProbability((byte)0, (byte)1);
     }
 
