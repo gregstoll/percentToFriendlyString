@@ -48,6 +48,7 @@ public class Tests {
         ArrayList<TestCase> testCases = new ArrayList<TestCase>();
         while((line = bufferedReader.readLine()) != null) {
             if (line.startsWith("#")) {
+                lineNumber++;
                 continue;
             }
             String[] parts = line.split(",");
