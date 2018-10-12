@@ -1,5 +1,5 @@
 module ProbabilityToFriendlyString
-    class FriendlyString
+    class FriendlyProbability
         include Comparable
         attr_reader :numerator, :denominator, :friendlyString
 
@@ -41,16 +41,16 @@ module ProbabilityToFriendlyString
                 raise RangeError, "f is less than 0 or greater than 1"
             end
             if f == 0
-                return FriendlyString.new 0, 1
+                return FriendlyProbability.new 0, 1
             elsif f == 1
-                return FriendlyString.new 1, 1
+                return FriendlyProbability.new 1, 1
             elsif f > 0.99
-                return FriendlyString.new 99, 100, ">99 in 100"
+                return FriendlyProbability.new 99, 100, ">99 in 100"
             elsif f < 0.01
-                return FriendlyString.new 1, 100, "<1 in 100"
+                return FriendlyProbability.new 1, 100, "<1 in 100"
             end
 
-            FriendlyString._createFractionsData
+            FriendlyProbability._createFractionsData
             # index of the least element > f
             right = @@fractionsData.bsearch_index {|x| x[0] > f}
             if right
@@ -59,9 +59,9 @@ module ProbabilityToFriendlyString
                 left = @@fractionsData.length - 1
             end
             if (left == (@@fractionsData.length - 1) or (left >= 0 and f - @@fractionsData[left][0] < @@fractionsData[right][0] - f))
-                return FriendlyString.new @@fractionsData[left][1], @@fractionsData[left][2]
+                return FriendlyProbability.new @@fractionsData[left][1], @@fractionsData[left][2]
             else
-                return FriendlyString.new @@fractionsData[right][1], @@fractionsData[right][2]
+                return FriendlyProbability.new @@fractionsData[right][1], @@fractionsData[right][2]
             end
         end
 
