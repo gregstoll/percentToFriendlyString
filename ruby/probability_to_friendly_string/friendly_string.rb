@@ -15,6 +15,19 @@ module ProbabilityToFriendlyString
         end
 
         def self.fromProbability(f)
+            if f < 0 or f > 1
+                raise RangeError, "f is less than 0 or greater than 1"
+            end
+            if f == 0
+                return FriendlyString.new 0, 1
+            elsif f == 1
+                return FriendlyString.new 1, 1
+            elsif f > 0.99
+                return FriendlyString.new 99, 100, ">99 in 100"
+            elsif f < 0.01
+                return FriendlyString.new 1, 100, "<1 in 100"
+            end
+
             return FriendlyString.new 0, 1
         end
 
