@@ -1,5 +1,5 @@
 require 'test/unit'
-require './friendly_probability'
+require_relative '../lib/probability_to_friendly_string'
 
 class FriendlyProbabilityTests < Test::Unit::TestCase
     def test_all_cases
