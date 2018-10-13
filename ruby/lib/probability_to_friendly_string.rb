@@ -1,4 +1,5 @@
 module ProbabilityToFriendlyString
+    # Represents probability represented in a friendly manner.
     class FriendlyProbability
         include Comparable
         attr_reader :numerator, :denominator, :friendlyString
@@ -36,6 +37,10 @@ module ProbabilityToFriendlyString
             @@fractionsData = fractionsData.sort
         end
 
+        # Creates a FriendlyProbability from a double
+        #
+        # @param f [Numeric] a probability between 0 and 1
+        # @return [FriendlyProbability] a FriendlyProbability that is closest to #f
         def self.fromProbability(f)
             if f < 0 or f > 1
                 raise RangeError, "f is less than 0 or greater than 1"
