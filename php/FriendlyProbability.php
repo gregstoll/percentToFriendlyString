@@ -27,14 +27,17 @@ final class FriendlyProbability {
             $add_fraction = function(array &$data, int $numerator, int $denominator) {
                 $data[] = [floatval($numerator)/$denominator, $numerator, $denominator];
             };
-            for ($d = 2; $d <= 11; ++$d) {
+            for ($d = 2; $d <= 10; ++$d) {
                 for ($n = 1; $n < $d; ++$n) {
                     if (FriendlyProbability::gcd($n, $d) == 1) {
                         $add_fraction($data, $n, $d);
                     }
                 }
             }
-            //TODO more
+            foreach ([12, 15, 20, 30, 40, 50, 60, 80, 100] as $d) {
+                $add_fraction($data, 1, $d);
+                $add_fraction($data, $d - 1, $d);
+            }
             sort($data);
             FriendlyProbability::$fractions_data = $data;
         }
@@ -59,14 +62,16 @@ final class FriendlyProbability {
         }
         $fractions_data = FriendlyProbability::get_fractions_data();
 
-        $index = FriendlyProbability::binary_search($fractions_data, [$f, 1000000, 1000000], function($a, $b) { return $a <=> $b; });
+        $index = FriendlyProbability::binary_search($fractions_data, [$f, 1000000, 1000000], function($a, $b) { return $a[0] <=> $b[0]; });
         if ($index >= 0) {
             // exact match
             return new FriendlyProbability($fractions_data[$index][1], $fractions_data[$index][2]);
         }
-        // Per the documentation, if it's not found the return value is the bitwise complement
-        // of the index of the next element that's larger than the item.
-        $next_larger_position = ~$index;
+        // Per the documentation, if it's not found the return value is (-insert_index - 1)
+        // where insert_index is the index of smallest element that is greater than $key or sizeof($a) if $key
+        // is larger than all elements in the array.
+        // Here we want insert_index, so transform $index into that.
+        $next_larger_position = -1 * $index - 1;
         if ($next_larger_position == count($fractions_data)
             || ($next_larger_position - 1 >= 0 && ($f - $fractions_data[$next_larger_position - 1][0] < $fractions_data[$next_larger_position][0] - $f))) {
             return new FriendlyProbability($fractions_data[$next_larger_position - 1][1], $fractions_data[$next_larger_position - 1][2]);
