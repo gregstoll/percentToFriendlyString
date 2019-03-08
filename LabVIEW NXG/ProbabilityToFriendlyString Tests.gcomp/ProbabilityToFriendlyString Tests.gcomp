@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="1D08D33C38145FD02F366C3283C41C8FEE9702D85D7FFBC418F957C2D0752C44BD1F0AFE6FF32B45BB40497241693B8429835058B311230DE2E0733E85D9B664" Timestamp="1D4D554E8F81325" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="GComponentFeatureSet" Name="http://www.ni.com/GComponent.xsd" OldestCompatibleVersion="6.1.0.1" Version="6.2.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="6.2.0.49154" Version="6.2.0.49154" />
+		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="SystemDesigner" Name="http://www.ni.com/SystemDesigner/EnvoyManagement" OldestCompatibleVersion="5.0.0.0" Version="5.0.0.49152" />
+		<ApplicationVersionInfo Build="6.4.0.49213" Name="LabVIEW NXG" Version="3.1.0" />
+	</SourceModelFeatureSet>
+	<ComponentDefinition DefaultConfigurationName="Configuration1" Id="4a744ecb73c74faa87ca433e29e0b7e1" RootNamespaceId="839596ed8c64442db8a75ab72d342a3e" xmlns="http://www.ni.com/GComponent.xsd">
+		<Icon Id="7824207d684849c1a95cfa6760099895" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="632fbc86543240aba0738131b61d2860" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="9464fbdc7694480382381ff293ba5659" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<CompilerSymbolTable Id="3b9334699fee4f3eafbbac1c62fcddf6" xmlns="http://www.ni.com/PlatformFramework" />
+		<ComponentConfiguration ComponentSubtypeIdentifier="Application" Id="50369d0b5f714a33ac613119a7e10cf0" Name="Configuration1">
+			<CompilerSymbolTable Id="9f522f81101b40ed81063e56cce351be" xmlns="http://www.ni.com/PlatformFramework" />
+			<NativeApplicationOutputTypeProperties Id="89ae4bbb4b804dd6b88896290955e98b" />
+			<ComponentItemProperties AssociatedEnvoyId="42ea36fd8a94721b735c16065cdcaa4" Id="ad023faf11b84e08a3aee1b867ff81fb" TopLevel="True" />
+		</ComponentConfiguration>
+	</ComponentDefinition>
+	<EnvoyManagerFile Id="9123e0325be64da397bd69d26c9013bf" xmlns="http://www.ni.com/PlatformFramework">
+		<ProjectSettings Id="a839a2c599234d3b8e6f091dbf6385a6" ModelDefinitionType="ProjectSettings" Name="ZProjectSettings" />
+		<EmbeddedDefinitionReference Id="5a3253889d1b4903b1a602e10634be17" ModelDefinitionType="{http://www.ni.com/GComponent.xsd}ComponentDefinitionEnvoyHierarchyRoot" Name="Global namespace">
+			<ComponentDefinitionEnvoyHierarchyRoot xmlns="http://www.ni.com/GComponent.xsd" />
+			<NameScopingEnvoy AutomaticallyResolveUp="True" Id="ce17826a96fa4ce2a145e1971f9f1ddd" Name="Gregstoll">
+				<NameScopingEnvoy AutomaticallyResolveUp="True" Id="839596ed8c64442db8a75ab72d342a3e" Name="ProbabilityToFriendlyStringTests">
+					<SourceFileReference Bindings="ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory" Id="74f7672a089d4d2e9673cfd22bce6214" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Read test cases.gvi" StoragePath="Read test cases.gvi" />
+					<SourceFileReference Bindings="ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory" Id="42ea36fd8a94721b735c16065cdcaa4" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Run tests.gvi" StoragePath="Run tests.gvi" />
+					<SourceFileReference Bindings="EnvoyManager" Id="796cf8ae195d41a0bbdc5db109c0b5f9" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="Test case.gtype" StoragePath="Test case.gtype\Test case.gtype" />
+					<SourceFileReference Id="ea4f8f8d2a5941909369a76033ad4b4e" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Parse test case.gvi" StoragePath="Parse test case.gvi" />
+				</NameScopingEnvoy>
+			</NameScopingEnvoy>
+		</EmbeddedDefinitionReference>
+		<NameScopingEnvoy Id="16034a60449c45cc9cccf1b031930aca" ModelDefinitionType="{http://www.ni.com/GComponent.xsd}ComponentDefinitionContentReferenceRoot" Name="ProbabilityToFriendlyString Tests.gcomp" NameTracksFileName="True">
+			<ComponentDefinitionContentReferenceRoot xmlns="http://www.ni.com/GComponent.xsd" />
+			<ContentReference ContentIdentifier="50369d0b5f714a33ac613119a7e10cf0" Id="32a2986382f24a6f9755ee72a4a50271" Name="Configuration1" OverridingModelDefinitionType="{http://www.ni.com/GComponent.xsd}ComponentConfiguration" />
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+</SourceFile>

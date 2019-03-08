@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="9A352FACA45EDAFFBBB618E1B8E4DA45FF6E222CF3892D464943D614DF674E8BC82A1CF41E8C0A5D59E1AE37F29CBC19821B5682E767FB43BB5F90259416E57F" Timestamp="1D4D55276F0E79D" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="6.2.0.49152" Version="6.2.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="6.2.0.49153" Version="6.2.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="6.2.0.49154" Version="6.2.0.49154" />
+		<ApplicationVersionInfo Build="6.4.0.49213" Name="LabVIEW NXG" Version="3.1.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition BaseType="gObject" BaseTypeSignature="@caca121dbe7d40a5a870fec1a2a87230" DataType="@570b57d4bb804d40b494a71c47b9c6fd" Id="735cb580fe874b6398504ca38c2e03bc" xmlns="http://www.ni.com/MocCommon">
+		<Icon Id="284096aae2fe49f9a781cbcedf93f4f9" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="9634d9f20291462095c24553c19ed8de" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="334117345a9b484baf337d0417316c00" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@570b57d4bb804d40b494a71c47b9c6fd" Id="de85f41c57b4a1c8f1dc8d78bf7ba4a" Name="Friendly fraction">
+			<p.DefaultValue>0x0_0_0_</p.DefaultValue>
+		</DataItem>
+		<TypeDefinitionMemberFunction AccessScope="Public" HintSignature="@eee9bad007c94947a720624aeaba27ec" Id="f83ab2a3dc5340e289e7f7d375d6d09a" Target="Gregstoll::ProbabilityToFriendlyString::Friendly fraction.gtype::To Friendly probability.gvi" xmlns="http://www.ni.com/PlatformFramework" />
+		<TypeDefinitionMemberProperty Id="1bdccb27188e4762abbdf4a3274abe30" MemberPropertyName="Double">
+			<TypeDefinitionMemberFunction AccessScope="Public" HintSignature="@4f29bdcc80c349bdab4beaea86214102" Id="c0718d112f394abcb9d21f5ecf02dac4" Target="Gregstoll::ProbabilityToFriendlyString::Friendly fraction.gtype::Read Double.gvi" xmlns="http://www.ni.com/PlatformFramework" />
+		</TypeDefinitionMemberProperty>
+		<TypeDefinitionMemberFunction AccessScope="Public" HintSignature="@a9aac2ab2e7347f2b8de700b34d55c9e" Id="28c800e6238442b5add2bc013a0b969a" Target="Gregstoll::ProbabilityToFriendlyString::Friendly fraction.gtype::Create.gvi" xmlns="http://www.ni.com/PlatformFramework" />
+		<TypeDefinitionMemberFunction AccessScope="Public" HintSignature="@4e4d96c6cbd84214bcc7752a7f0bf82c" Id="ce8dc0c35dd742408b91947a76abacb6" Target="Gregstoll::ProbabilityToFriendlyString::Friendly fraction.gtype::Make friendly fractions.gvi" xmlns="http://www.ni.com/PlatformFramework" />
+	</TypeDefinition>
+	<EnvoyManagerFile Id="797f42f623534db28f69b949e15a35cf" xmlns="http://www.ni.com/PlatformFramework">
+		<ProjectSettings Id="b8b50228e1e4459890a6c5744f5b8231" ModelDefinitionType="ProjectSettings" Name="ZProjectSettings" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="6c24d98783d94b18aed02885b08347fb" Name="Friendly fraction.gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="1168ca8fd4fb4dafa305d925571b8983" ModelDefinitionType="NationalInstruments.PanelCommon.SourceModel.ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Control" Id="db3a18c730d54e8dbd0d1a6325b95aa1" xmlns="http://www.ni.com/MocCommon">
+					<Cluster AutoArrange="[AutoArrange]SizeToFit" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@570b57d4bb804d40b494a71c47b9c6fd" Height="[float]167" Id="4f4fede8b6fe43beb9025899aeb610de" Label="[UIModel]afb397d67cb74ccbab89436fa9d164b9" Left="[float]466" TabIndex="[int]0" Top="[float]201" Value="{DataItemBinding Id=de85f41c57b4a1c8f1dc8d78bf7ba4a}" Width="[float]90" xmlns="http://www.ni.com/PanelCommon">
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="81f8d229017c458098aab86f0c5af4ca" Label="[UIModel]7c355748125348a4ac7b73f563518dc4" Left="[float]6" MinHeight="[float]24" TabIndex="[int]0" Top="[float]24" Value="{ClusterBinding FieldName=Double}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="7c355748125348a4ac7b73f563518dc4" LabelOwner="[UIModel]81f8d229017c458098aab86f0c5af4ca" Left="[float]6" Text="[string]Double" Top="[float]4" Width="[float]38" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="594af65d16924e4ea14585ebd5a18441" Interval="[byte]1" Label="[UIModel]9f781dd5258649abbc3c39b796ff1850" Left="[float]6" MinHeight="[float]24" TabIndex="[int]1" Top="[float]74" Value="{ClusterBinding FieldName=Numerator}" ValueFormatter="[string]LV:0" ValueType="[Type]UInt8" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="9f781dd5258649abbc3c39b796ff1850" LabelOwner="[UIModel]594af65d16924e4ea14585ebd5a18441" Left="[float]6" Text="[string]Numerator" Top="[float]54" Width="[float]58" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="cafe0ce5f5594ab88a8eba4ce1209f9c" Interval="[byte]1" Label="[UIModel]1580d8ae3c204e7584f6b7b6e6b7a8ea" Left="[float]4" MinHeight="[float]24" TabIndex="[int]2" Top="[float]131" Value="{ClusterBinding FieldName=Denominator}" ValueFormatter="[string]LV:0" ValueType="[Type]UInt8" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="1580d8ae3c204e7584f6b7b6e6b7a8ea" LabelOwner="[UIModel]cafe0ce5f5594ab88a8eba4ce1209f9c" Left="[float]4" Text="[string]Denominator" Top="[float]111" Width="[float]70" />
+					</Cluster>
+					<Label Height="[float]16" Id="afb397d67cb74ccbab89436fa9d164b9" LabelOwner="[UIModel]4f4fede8b6fe43beb9025899aeb610de" Left="[float]466" Text="[string]Friendly fraction" Top="[float]181" Width="[float]85" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+			<SourceFileReference Id="a1dad6e38c04a879a6d6e0b88352644" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="To Friendly probability.gvi" StoragePath="To Friendly probability.gvi" />
+			<SourceFileReference Id="77775d5329ba442d8004a4fd24145b74" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Read Double.gvi" StoragePath="Read Double.gvi" />
+			<SourceFileReference Id="8a5f66ec25f4453ba5a4220c293e0a4d" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Create.gvi" StoragePath="Create.gvi" />
+			<SourceFileReference Id="7900bcb9be684eb689002e0ef5a7c0e6" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Make friendly fractions.gvi" StoragePath="Make friendly fractions.gvi" />
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="caca121dbe7d40a5a870fec1a2a87230">
+			<Composite Id="1" Name="gObject" GenericTypeDefinition="Void" BaseType="Void" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="570b57d4bb804d40b494a71c47b9c6fd">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Double" DataType="Double" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Numerator" DataType="UInt8" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Denominator" DataType="UInt8" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="eee9bad007c94947a720624aeaba27ec">
+			<Attributed AttributedType="@e28871b65c944aaa84e71e493dfed2d5">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.Compiler.ThrallMap" Value="[ThrallMapAttributeValue]R0:[L0]" />
+					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
+					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="4f29bdcc80c349bdab4beaea86214102">
+			<Attributed AttributedType="@87bf7c4ab44d40ed8527327f69ae9046">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.Compiler.ThrallMap" Value="[ThrallMapAttributeValue]R0:[L0]" />
+					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
+					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="a9aac2ab2e7347f2b8de700b34d55c9e">
+			<Attributed AttributedType="@06d7916c40a74dad88e90435da2d6ea4">
+				<AttributeValues>
+					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
+					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="4e4d96c6cbd84214bcc7752a7f0bf82c">
+			<Attributed AttributedType="@94b738773bf445e594bbf945e14aeb0b">
+				<AttributeValues>
+					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
+					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="e28871b65c944aaa84e71e493dfed2d5">
+			<Function Id="1" IsStatic="True" IsConstructor="False" Name="To Friendly Probability.gvi" ReturnType="Void" DeclaringType="@6178abd121794198915ff6a0a4f6c4cc" GenericTypeDefinition="Void">
+				<Parameters>
+					<Attributed AttributedType="@3d75584ffd504d93a1b4d807e1cc8dcd">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Friendly fraction in" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@f712f92368e1444da3350db6dc4df057">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Friendly fraction out" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@ce4ada68d3e44461be04917b97944750">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]FriendlyProbability out" />
+						</AttributeValues>
+					</Attributed>
+				</Parameters>
+			</Function>
+		</p.TypeReference>
+		<p.TypeReference TypeId="87bf7c4ab44d40ed8527327f69ae9046">
+			<Function Id="1" IsStatic="True" IsConstructor="False" Name="Read Double.gvi" InlineIntoCaller="True" ReturnType="Void" DeclaringType="@6178abd121794198915ff6a0a4f6c4cc" GenericTypeDefinition="Void">
+				<Parameters>
+					<Attributed AttributedType="@3d75584ffd504d93a1b4d807e1cc8dcd">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Friendly fraction in" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@a005d1bf36a346968c0ed0bcc90e40fb">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Error in" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@f712f92368e1444da3350db6dc4df057">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Friendly fraction out" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@73b8f240994d4d52ac5d1dbc91730fc3">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Double" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@9e10974fdf8f462a9ac0a6520bd0931f">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Error out" />
+						</AttributeValues>
+					</Attributed>
+				</Parameters>
+			</Function>
+		</p.TypeReference>
+		<p.TypeReference TypeId="06d7916c40a74dad88e90435da2d6ea4">
+			<Function Id="1" IsStatic="True" IsConstructor="False" Name="Create.gvi" ReturnType="Void" DeclaringType="@6178abd121794198915ff6a0a4f6c4cc" GenericTypeDefinition="Void">
+				<Parameters>
+					<Attributed AttributedType="@f0963f05a6ae45acb28f95ca2af3e079">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Numerator" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@13f1ff20e3d54819a230879eca8e6e10">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Denominator" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@f712f92368e1444da3350db6dc4df057">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Friendly fraction" />
+						</AttributeValues>
+					</Attributed>
+				</Parameters>
+			</Function>
+		</p.TypeReference>
+		<p.TypeReference TypeId="94b738773bf445e594bbf945e14aeb0b">
+			<Function Id="1" IsStatic="True" IsConstructor="False" Name="Make friendly fractions.gvi" ReturnType="Void" DeclaringType="@6178abd121794198915ff6a0a4f6c4cc" GenericTypeDefinition="Void">
+				<Parameters>
+					<Attributed AttributedType="@16ce53e0d1a94b93aab7d1c28cd6ca32">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Friendly fractions" />
+						</AttributeValues>
+					</Attributed>
+				</Parameters>
+			</Function>
+		</p.TypeReference>
+		<p.TypeReference TypeId="6178abd121794198915ff6a0a4f6c4cc">
+			<Attributed AttributedType="@c2a847996fbf4ac2945fbe2cba48c7f8">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Gregstoll::ProbabilityToFriendlyString" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="3d75584ffd504d93a1b4d807e1cc8dcd">
+			<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="L0" DataType="@6178abd121794198915ff6a0a4f6c4cc" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="f712f92368e1444da3350db6dc4df057">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R0" DataType="@6178abd121794198915ff6a0a4f6c4cc" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="ce4ada68d3e44461be04917b97944750">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R1" DataType="@55f3c65581ef401dad15e95d98831be4" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="a005d1bf36a346968c0ed0bcc90e40fb">
+			<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="L3" DataType="Error" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="73b8f240994d4d52ac5d1dbc91730fc3">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R1" DataType="Double" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="9e10974fdf8f462a9ac0a6520bd0931f">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R3" DataType="Error" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="f0963f05a6ae45acb28f95ca2af3e079">
+			<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="L0" DataType="UInt8" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="13f1ff20e3d54819a230879eca8e6e10">
+			<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="L1" DataType="UInt8" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="16ce53e0d1a94b93aab7d1c28cd6ca32">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R0" DataType="@6a926685981a494d8b744fa85360fce9" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="c2a847996fbf4ac2945fbe2cba48c7f8">
+			<Composite Id="1" Name="Friendly fraction.gtype">
+				<MemberScopes>
+					<Access Scope="Private" />
+					<Access Scope="Private" />
+					<Access Scope="Private" />
+					<Access Scope="Public" />
+					<Access Scope="Public" />
+					<Access Scope="Public" />
+					<Access Scope="Public" />
+				</MemberScopes>
+				<GenericTypeDefinition>Void</GenericTypeDefinition>
+				<BaseType>@caca121dbe7d40a5a870fec1a2a87230</BaseType>
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Double" DataType="Double" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Numerator" DataType="UInt8" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Denominator" DataType="UInt8" />
+					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Create.gvi" ReturnType="Void" DeclaringType="@6178abd121794198915ff6a0a4f6c4cc" GenericTypeDefinition="Void" />
+					<Function Id="3" IsStatic="False" IsConstructor="False" Name="Make friendly fractions.gvi" ReturnType="Void" DeclaringType="@6178abd121794198915ff6a0a4f6c4cc" GenericTypeDefinition="Void" />
+					<Function Id="4" IsStatic="False" IsConstructor="False" Name="Read Double.gvi" ReturnType="Void" DeclaringType="@6178abd121794198915ff6a0a4f6c4cc" GenericTypeDefinition="Void" />
+					<Function Id="5" IsStatic="False" IsConstructor="False" Name="To Friendly Probability.gvi" ReturnType="Void" DeclaringType="@6178abd121794198915ff6a0a4f6c4cc" GenericTypeDefinition="Void" />
+					<Property Name="Double" Getter="Read Double.gvi" DataType="Double" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="55f3c65581ef401dad15e95d98831be4">
+			<Attributed AttributedType="@2a29b4b4551048049479b2d4da724bed">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Gregstoll::ProbabilityToFriendlyString" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="6a926685981a494d8b744fa85360fce9">
+			<VariableArray DereferenceType="@6178abd121794198915ff6a0a4f6c4cc" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="2a29b4b4551048049479b2d4da724bed">
+			<Composite Id="1" Name="Friendly probability.gtype">
+				<MemberScopes>
+					<Access Scope="Private" />
+					<Access Scope="Private" />
+					<Access Scope="Private" />
+					<Access Scope="Public" />
+					<Access Scope="Private" />
+					<Access Scope="Public" />
+					<Access Scope="Public" />
+				</MemberScopes>
+				<GenericTypeDefinition>Void</GenericTypeDefinition>
+				<BaseType>@caca121dbe7d40a5a870fec1a2a87230</BaseType>
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Numerator" DataType="UInt8" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Denominator" DataType="UInt8" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Friendly String" DataType="String" />
+					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Create.gvi" ReturnType="Void" DeclaringType="@55f3c65581ef401dad15e95d98831be4" GenericTypeDefinition="Void" />
+					<Function Id="3" IsStatic="False" IsConstructor="False" Name="From double core.gvi" ReturnType="Void" DeclaringType="@55f3c65581ef401dad15e95d98831be4" GenericTypeDefinition="Void" />
+					<Function Id="4" IsStatic="False" IsConstructor="False" Name="From double.gvi" ReturnType="Void" DeclaringType="@55f3c65581ef401dad15e95d98831be4" GenericTypeDefinition="Void" />
+					<Function Id="5" IsStatic="False" IsConstructor="False" Name="To string.gvi" ReturnType="Void" DeclaringType="@55f3c65581ef401dad15e95d98831be4" GenericTypeDefinition="Void" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+	<IconTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.IconModel Target="Gregstoll::ProbabilityToFriendlyString::Friendly fraction.gtype::To Friendly probability.gvi">
+			<MergeScript>
+				<MergeItem Path="." IsPrimary="True">
+					<Icon ListViewIconCrop="0 0 40 40">
+						<IconPanel Height="[float]40" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+							<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Left="[float]0" TemplateName="[string]GrayNoText" Top="[float]0" Width="[float]40">
+								<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+								<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+								<FileNameText Attached="[bool]True" Height="[float]36" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]To Friendly probability" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden" Width="[float]36">
+									<FontSetting FontFamily="Verdana" FontSize="6" />
+								</FileNameText>
+							</IconTemplate>
+							<IconTemplate Height="[float]40" IsHitTestVisible="[bool]False" Left="[float]0" TemplateName="[string][Comp]Gregstoll.ProbabilityToFriendlyString.gcomp" Top="[float]0" Width="[float]40" />
+							<IconTemplate Height="[float]40" IsHitTestVisible="[bool]False" Left="[float]0" TemplateName="[string][Class]Friendly fraction.gtype" Top="[float]0" Width="[float]40" />
+						</IconPanel>
+					</Icon>
+				</MergeItem>
+			</MergeScript>
+		</p.IconModel>
+		<p.IconModel Target="Gregstoll::ProbabilityToFriendlyString::Friendly fraction.gtype::Read Double.gvi">
+			<MergeScript>
+				<MergeItem Path="." IsPrimary="True">
+					<Icon ListViewIconCrop="0 0 40 40">
+						<IconPanel Height="[float]40" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+							<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Left="[float]0" TemplateName="[string]GrayNoText" Top="[float]0" Width="[float]40">
+								<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+								<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+								<FileNameText Attached="[bool]True" Height="[float]36" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Read Double" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden" Width="[float]36">
+									<FontSetting FontFamily="Verdana" FontSize="7.5" />
+								</FileNameText>
+							</IconTemplate>
+							<IconTemplate Height="[float]40" IsHitTestVisible="[bool]False" Left="[float]0" TemplateName="[string][Comp]Gregstoll.ProbabilityToFriendlyString.gcomp" Top="[float]0" Width="[float]40" />
+							<IconTemplate Height="[float]40" IsHitTestVisible="[bool]False" Left="[float]0" TemplateName="[string][Class]Friendly fraction.gtype" Top="[float]0" Width="[float]40" />
+						</IconPanel>
+					</Icon>
+				</MergeItem>
+			</MergeScript>
+		</p.IconModel>
+		<p.IconModel Target="Gregstoll::ProbabilityToFriendlyString::Friendly fraction.gtype::Create.gvi">
+			<MergeScript>
+				<MergeItem Path="." IsPrimary="True">
+					<Icon ListViewIconCrop="0 0 40 40">
+						<IconPanel Height="[float]40" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+							<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Left="[float]0" TemplateName="[string]Gray" Top="[float]0" Width="[float]40">
+								<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+								<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+								<FileNameText Attached="[bool]True" Height="[float]36" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Create" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden" Width="[float]36">
+									<FontSetting FontFamily="Verdana" FontSize="7.5" />
+								</FileNameText>
+							</IconTemplate>
+							<IconTemplate Height="[float]40" IsHitTestVisible="[bool]False" Left="[float]0" TemplateName="[string][Comp]Gregstoll.ProbabilityToFriendlyString.gcomp" Top="[float]0" Width="[float]40" />
+							<IconTemplate Height="[float]40" IsHitTestVisible="[bool]False" Left="[float]0" TemplateName="[string][Class]Friendly fraction.gtype" Top="[float]0" Width="[float]40" />
+						</IconPanel>
+					</Icon>
+				</MergeItem>
+			</MergeScript>
+		</p.IconModel>
+		<p.IconModel Target="Gregstoll::ProbabilityToFriendlyString::Friendly fraction.gtype::Make friendly fractions.gvi">
+			<MergeScript>
+				<MergeItem Path="." IsPrimary="True">
+					<Icon ListViewIconCrop="0 0 40 40">
+						<IconPanel Height="[float]40" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+							<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Left="[float]0" TemplateName="[string]Gray" Top="[float]0" Width="[float]40">
+								<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+								<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+								<FileNameText Attached="[bool]True" Height="[float]36" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Make friendly fractions" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden" Width="[float]36">
+									<FontSetting FontFamily="Verdana" FontSize="6" />
+								</FileNameText>
+							</IconTemplate>
+							<IconTemplate Height="[float]40" IsHitTestVisible="[bool]False" Left="[float]0" TemplateName="[string][Comp]Gregstoll.ProbabilityToFriendlyString.gcomp" Top="[float]0" Width="[float]40" />
+							<IconTemplate Height="[float]40" IsHitTestVisible="[bool]False" Left="[float]0" TemplateName="[string][Class]Friendly fraction.gtype" Top="[float]0" Width="[float]40" />
+						</IconPanel>
+					</Icon>
+				</MergeItem>
+			</MergeScript>
+		</p.IconModel>
+	</IconTable>
+</SourceFile>

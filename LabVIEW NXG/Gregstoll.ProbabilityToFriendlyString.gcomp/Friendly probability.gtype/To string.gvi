@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="4F240E91A02AA603748339D4A6B3283C2E885A460208E202F7F6E8B76D00F4A8FFEEBAEE0E3388FB8830F9DE93BCE22519C7E8AA07A8C0CA467137F5B137BC84" Timestamp="1D4D54EF703FA62" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="6.2.0.49152" Version="6.2.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="LabVIEW Virtual Instrument" Name="http://www.ni.com/LabVIEW.VI" OldestCompatibleVersion="6.2.0.49152" Version="6.2.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="6.2.0.49153" Version="6.2.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="6.2.0.49154" Version="6.2.0.49154" />
+		<ApplicationVersionInfo Build="6.4.0.49213" Name="LabVIEW NXG" Version="3.1.0" />
+	</SourceModelFeatureSet>
+	<VirtualInstrument Id="9556feb2ba1b4b72a6eee5274151ae50" xmlns="http://www.ni.com/LabVIEW.VI">
+		<Icon Id="816f14b6ed92481c914025f99748a44b" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="ed0418f66aa446738cd774c6f5c92964" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Id="cb651ce375fb4147859b07235611a124" Left="[float]0" TemplateName="[string]Gray" Top="[float]0" Width="[float]40">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="541844c08f66449589b135f61cca999b" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="949c18e4e36f4e7eb5281b2afad62895" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+					<FileNameText Attached="[bool]True" Height="[float]36" Id="9eacc14c6d6c4b9b9dd9b308e4793792" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]FriendlyProbability to String" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden" Width="[float]36">
+						<FontSetting FontFamily="Verdana" FontSize="6" Id="b8524adf5a15460b9e8d083f606374a7" />
+					</FileNameText>
+				</IconTemplate>
+			</IconPanel>
+		</Icon>
+		<ConnectorPane Height="40" Id="f28233fe38424aa99c218872e2201c67" ListViewHeight="70" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+			<ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="a1a3694e4b2d491bb238a71fd4464075" />
+			<ConnectorPaneTerminal Hotspot="0 15" />
+			<ConnectorPaneTerminal Hotspot="0 25" />
+			<ConnectorPaneTerminal Hotspot="0 35" />
+			<ConnectorPaneTerminal Hotspot="15 0" />
+			<ConnectorPaneTerminal Hotspot="25 0" />
+			<ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 50" Parameter="a5e9df00d23a4c9f9e7458053af98c71" />
+			<ConnectorPaneTerminal Hotspot="40 15" />
+			<ConnectorPaneTerminal Hotspot="40 25" />
+			<ConnectorPaneTerminal Hotspot="40 35" />
+			<ConnectorPaneTerminal Hotspot="15 40" />
+			<ConnectorPaneTerminal Hotspot="25 40" />
+		</ConnectorPane>
+		<DiagramUnplacedItems Id="b2b68741fc07435c92dcd898774a1295" xmlns="http://www.ni.com/MocCommon" />
+		<FrontPanelUnplacedItems Id="657553b5566649c1b14e7e0d54e17205" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0">
+			<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="71d62a6752704b44830985c7212ba00d" IsReadOnly="[bool]True" Left="[float]0" MinHeight="[float]24" Name="[string]string" TabIndex="[int]0" Text="{DataItemBinding Id=a5e9df00d23a4c9f9e7458053af98c71}" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+		</FrontPanelUnplacedItems>
+		<BlockDiagram Id="c2961356694d41f5a5e58c73123e4624">
+			<DataAccessor Bounds="255 205 40 15" DataItem="a1a3694e4b2d491bb238a71fd4464075" Id="f75a8b8fe75e430999b2cf9e4b0a7c92" Label="6fb996ded02c47da8c45fd14dc5da092" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="@7e855ad4e8af412cb296f290a01f5f3e" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="f75a8b8fe75e430999b2cf9e4b0a7c92" Bounds="144 205 106 14" Id="6fb996ded02c47da8c45fd14dc5da092" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Friendly Probability</p.Text>
+			</NodeLabel>
+			<FormatIntoString Bounds="750 200 40 60" Id="43fb1e4bc84448c48f15e2f5b54293fc" Terminals="formatString=bb1365b8e012405cb8595c4a1acd0d18, outString=f1d80b3f59454004b84b2ad5f9f1bfb0, c0t0v=178239ea422420db9f5d815bc386c1e, c1t0v=e9f8be808fe4874ad7134be8022b6a5, c2t0v=675024bd48d48b9b50102b442faf9ba" VerticalChunkCount="3" />
+			<Literal Bounds="585 175 140 15" DataType="String" Id="1153c430bf794e5eb78c3e20854568ce" Label="19c0cf10e30e44fdbf8eb82dcc91b4de" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>%d/%d (text: "%s")</p.Data>
+				<StringBehavior TextDisplayMode="Default" />
+			</Literal>
+			<NodeLabel AttachedTo="1153c430bf794e5eb78c3e20854568ce" Bounds="585 157 30 15" Id="19c0cf10e30e44fdbf8eb82dcc91b4de" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>format string</p.Text>
+			</NodeLabel>
+			<Wire Id="bb1365b8e012405cb8595c4a1acd0d18" Joints="N(1153c430bf794e5eb78c3e20854568ce:Out)|(725,180) h(50) N(43fb1e4bc84448c48f15e2f5b54293fc:formatString)|(775,200)" xmlns="http://www.ni.com/PlatformFramework" />
+			<PropertyNode Bounds="315 205 418 75" Id="ba2a95ede18c476fad309f6ed7e00bed" InstanceDataType="@7e855ad4e8af412cb296f290a01f5f3e" Mode="InstanceProperties" xmlns="http://www.ni.com/MocCommon">
+				<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+					<TypeDefinitionTarget TargetName="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype" />
+				</p.TypeDefinitionTargets>
+				<PropertyItemTerminal DataType="UInt8" Hotspot="418 25" Id="c0t0v" Path="Numerator" PathElementMemberKinds="Field" Usage="Optional" />
+				<PropertyItemTerminal DataType="UInt8" Hotspot="418 40" Id="c1t0v" Path="Denominator" PathElementMemberKinds="Field" Usage="Optional" />
+				<PropertyItemTerminal DataType="String" Hotspot="418 55" Id="c2t0v" Path="Friendly String" PathElementMemberKinds="Field" Usage="Optional" />
+			</PropertyNode>
+			<Wire Id="8600c9b181134b0faea8312519a7afc6" Joints="N(f75a8b8fe75e430999b2cf9e4b0a7c92:Value)|(295,210) N(ba2a95ede18c476fad309f6ed7e00bed:instance in)|(315,210)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="178239ea422420db9f5d815bc386c1e" Joints="N(ba2a95ede18c476fad309f6ed7e00bed:c0t0v)|(733,230) h(7) v(5) N(43fb1e4bc84448c48f15e2f5b54293fc:c0t0v)|(750,235)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="e9f8be808fe4874ad7134be8022b6a5" Joints="N(ba2a95ede18c476fad309f6ed7e00bed:c1t0v)|(733,245) N(43fb1e4bc84448c48f15e2f5b54293fc:c1t0v)|(750,245)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="675024bd48d48b9b50102b442faf9ba" Joints="N(ba2a95ede18c476fad309f6ed7e00bed:c2t0v)|(733,260) h(7) v(-5) N(43fb1e4bc84448c48f15e2f5b54293fc:c2t0v)|(750,255)" xmlns="http://www.ni.com/PlatformFramework" />
+			<DataAccessor Bounds="810 200 40 15" DataItem="a5e9df00d23a4c9f9e7458053af98c71" Id="cbe2b4894ea74321bba8c361d0c209cc" Label="b0acc3c9955540ccade70c2b654702fe" xmlns="http://www.ni.com/MocCommon">
+				<Terminal DataType="String" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+			</DataAccessor>
+			<NodeLabel AttachedTo="cbe2b4894ea74321bba8c361d0c209cc" Bounds="855 200 32 14" Id="b0acc3c9955540ccade70c2b654702fe" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>string</p.Text>
+			</NodeLabel>
+			<Wire Id="f1d80b3f59454004b84b2ad5f9f1bfb0" Joints="N(43fb1e4bc84448c48f15e2f5b54293fc:outString)|(790,205) N(cbe2b4894ea74321bba8c361d0c209cc:Value)|(813,205)" xmlns="http://www.ni.com/PlatformFramework" />
+		</BlockDiagram>
+		<NativeFrontPanel Height="[float]1600" HtmlPanel="[bool]False" Id="a32d38db17f04a9abb8b7d56c93cd686" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Fixed" Top="[float]0" Width="[float]2000">
+			<PanelExecutionWindow Id="59d6a68e621443218bc0a904a67e485a" />
+			<ValueClassControl BaseName="[string]Friendly probability" Id="7f787b4becac4e72b7f747dc504f451d" IsTabStop="[bool]True" Label="[UIModel]79d9e82be14446e0b6b86ee520c9c0b2" Left="[float]228" TabIndex="[int]0" Top="[float]132" Value="{DataItemBinding Id=a1a3694e4b2d491bb238a71fd4464075}" ValueClassControl="[Type]@7e855ad4e8af412cb296f290a01f5f3e" p4:ControlDefinitionChecksum="tIL371PRlLSUNyQ01edbyFEg7k7Fwzx9VP5hhlLyITE=" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/MocCommon">
+				<p4:p.TypeDefinitionTargets>
+					<p4:TypeDefinitionTarget TargetName="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype::ControlDefinition" />
+				</p4:p.TypeDefinitionTargets>
+			</ValueClassControl>
+			<Label Height="[float]16" Id="79d9e82be14446e0b6b86ee520c9c0b2" LabelOwner="[UIModel]7f787b4becac4e72b7f747dc504f451d" Left="[float]228" Text="[string]Friendly Probability" Top="[float]112" Width="[float]102" xmlns="http://www.ni.com/PanelCommon" />
+		</NativeFrontPanel>
+		<DataItem CallDirection="Input" CallIndex="0" CallUsage="Required" DataType="@7e855ad4e8af412cb296f290a01f5f3e" Id="a1a3694e4b2d491bb238a71fd4464075" Name="Friendly Probability" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>null</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype" />
+			</p.TypeDefinitionTargets>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="String" Id="a5e9df00d23a4c9f9e7458053af98c71" Name="string" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>""</p.DefaultValue>
+		</DataItem>
+	</VirtualInstrument>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="7e855ad4e8af412cb296f290a01f5f3e">
+			<Attributed AttributedType="@e9c68308fc9d4472bcba7e244a3e9a4e">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Gregstoll::ProbabilityToFriendlyString" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="e9c68308fc9d4472bcba7e244a3e9a4e">
+			<Composite Id="1" Name="Friendly probability.gtype">
+				<MemberScopes>
+					<Access Scope="Private" />
+					<Access Scope="Private" />
+					<Access Scope="Private" />
+					<Access Scope="Public" />
+					<Access Scope="Public" />
+				</MemberScopes>
+				<GenericTypeDefinition>Void</GenericTypeDefinition>
+				<BaseType>@caca121dbe7d40a5a870fec1a2a87230</BaseType>
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Numerator" DataType="UInt8" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Denominator" DataType="UInt8" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Friendly String" DataType="String" />
+					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Create FriendlyProbability.gvi" ReturnType="Void" DeclaringType="@7e855ad4e8af412cb296f290a01f5f3e" GenericTypeDefinition="Void" />
+					<Function Id="3" IsStatic="False" IsConstructor="False" Name="FriendlyProbability to String.gvi" ReturnType="Void" DeclaringType="@7e855ad4e8af412cb296f290a01f5f3e" GenericTypeDefinition="Void" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="caca121dbe7d40a5a870fec1a2a87230">
+			<Composite Id="1" Name="gObject" GenericTypeDefinition="Void" BaseType="Void" />
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+	<TypeAppearanceTable xmlns="http://www.ni.com/PlatformFramework" />
+</SourceFile>

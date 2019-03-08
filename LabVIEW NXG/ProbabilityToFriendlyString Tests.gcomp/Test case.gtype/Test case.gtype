@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="60EABE7D68896A4C5A6CDF33F824F3D74174AEB618521AB50B87E544CDC8A7E728097C2E910D5993BC18D10F35541E97F5A33038FF1AA80CD8ABCEF134A3309B" Timestamp="1D4D527C08174F4" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="6.2.0.49152" Version="6.2.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="6.2.0.49153" Version="6.2.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="6.2.0.49154" Version="6.2.0.49154" />
+		<ApplicationVersionInfo Build="6.4.0.49213" Name="LabVIEW NXG" Version="3.1.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@7344364c70d343f4a8fcbe7b7554aecf" Id="6881c2b33ac14f3c90a8a27e084f0fe3" xmlns="http://www.ni.com/MocCommon">
+		<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+			<TypeDefinitionTarget TargetName="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype" />
+		</p.TypeDefinitionTargets>
+		<Icon Id="41a052e344794dba911d19c001c8ee15" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="4e40ad08cc7e427ea91207f1adee8a4e" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="588430358f3a45f1963c1eeb76ab1bd1" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@7344364c70d343f4a8fcbe7b7554aecf" Id="838fb9b698ef4bb0b701a1a5cf9ccc60" Name="Test case">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>0x0</Field1>
+					<Field2>
+						<Cluster>
+							<Field1>0</Field1>
+							<Field2>0</Field2>
+							<Field3>""</Field3>
+						</Cluster>
+					</Field2>
+					<Field3>0</Field3>
+				</Cluster>
+			</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype" />
+			</p.TypeDefinitionTargets>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="a224246bcccd4428bcfcd7bf80fdbdf0" xmlns="http://www.ni.com/PlatformFramework">
+		<ProjectSettings Id="4de9de68d1734479965d65d8e04f08cd" ModelDefinitionType="ProjectSettings" Name="ZProjectSettings" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="6304914a01244a5683a19976bcf573ec" Name="Test case.gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="d014b165d6eb468ea7187503118a2b62" ModelDefinitionType="NationalInstruments.PanelCommon.SourceModel.ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Control" Id="44c1604e75794975bb714ce76cbe3eef" xmlns="http://www.ni.com/MocCommon">
+					<Cluster AutoArrange="[AutoArrange]SizeToFit" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@7344364c70d343f4a8fcbe7b7554aecf" Height="[float]314" Id="b0d4fbeb984247d9936a8c5f79007f4e" Label="[UIModel]c2ff414e4f194295bfae6d24103cc3d5" Left="[float]324" TabIndex="[int]0" Top="[float]153" Value="{DataItemBinding Id=838fb9b698ef4bb0b701a1a5cf9ccc60}" Width="[float]118" xmlns="http://www.ni.com/PanelCommon">
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="942131eab8cd40b9befb4238c3c0f2b2" Label="[UIModel]8615c03bc16a493fa24c8efb437f100a" Left="[float]4" MinHeight="[float]24" TabIndex="[int]0" Top="[float]24" Value="{ClusterBinding FieldName=Probability}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="8615c03bc16a493fa24c8efb437f100a" LabelOwner="[UIModel]942131eab8cd40b9befb4238c3c0f2b2" Left="[float]4" Text="[string]Probability" Top="[float]4" Width="[float]57" />
+						<Cluster AutoArrange="[AutoArrange]SizeToFit" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@07957b1e6de344108eb39623f648886a" Height="[float]164" Id="e884cbe9c27341f9be6da9bac83fc27e" IsTabStop="[bool]True" Label="[UIModel]a55e7fd26ecc49cb8e5d64a69774d809" Left="[float]4" TabIndex="[int]1" Top="[float]85" Value="{ClusterBinding FieldName=Expected\ Friendly\ Probability}" Width="[float]92" p7:ControlDefinitionChecksum="Czg62860r83x2prRMya0EmEuvTEYy5oj0VpdMspllao=" xmlns:p7="http://www.ni.com/PanelCommon">
+							<p7:p.TypeDefinitionTargets>
+								<p7:TypeDefinitionTarget TargetName="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype::ControlDefinition" />
+							</p7:p.TypeDefinitionTargets>
+							<NumericText BaseName="[string]Numeric" Height="[float]24" Id="dda880a337d449cba2d7879233d4dad1" Interval="[byte]1" Label="[UIModel]9bbaab4058884d1fab20e1d09c86211b" Left="[float]5" MinHeight="[float]24" TabIndex="[int]0" Top="[float]24" Value="{ClusterBinding FieldName=Numerator}" ValueFormatter="[string]LV:0" ValueType="[Type]UInt8" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<p7:Label Height="[float]16" Id="9bbaab4058884d1fab20e1d09c86211b" LabelOwner="[UIModel]dda880a337d449cba2d7879233d4dad1" Left="[float]5" Text="[string]Numerator" Top="[float]4" Width="[float]58" />
+							<NumericText BaseName="[string]Numeric" Height="[float]24" Id="7468c1f47e7c4ceaa7dba0ca9206e5f7" Interval="[byte]1" Label="[UIModel]4f4b9d51f22f4ca585d4aae03078f2d8" Left="[float]4" MinHeight="[float]24" TabIndex="[int]1" Top="[float]74" Value="{ClusterBinding FieldName=Denominator}" ValueFormatter="[string]LV:0" ValueType="[Type]UInt8" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<p7:Label Height="[float]16" Id="4f4b9d51f22f4ca585d4aae03078f2d8" LabelOwner="[UIModel]7468c1f47e7c4ceaa7dba0ca9206e5f7" Left="[float]4" Text="[string]Denominator" Top="[float]54" Width="[float]70" />
+							<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="2328342699f1489eb7936a9e2a1a6f45" Label="[UIModel]72197e13024a48eb94d44b1c808181f8" Left="[float]4" MinHeight="[float]24" TabIndex="[int]2" Text="{ClusterBinding FieldName=Friendly\ String}" Top="[float]128" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<p7:Label Height="[float]16" Id="72197e13024a48eb94d44b1c808181f8" LabelOwner="[UIModel]2328342699f1489eb7936a9e2a1a6f45" Left="[float]4" Text="[string]Friendly String" Top="[float]108" Width="[float]76" />
+						</Cluster>
+						<Label Height="[float]16" Id="a55e7fd26ecc49cb8e5d64a69774d809" LabelOwner="[UIModel]e884cbe9c27341f9be6da9bac83fc27e" Left="[float]4" Text="[string]Expected Friendly Probability" Top="[float]65" Width="[float]102" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="fbc819be62da48c48889775c0a7c5cfb" Interval="[uint]1" Label="[UIModel]8fa19c05efd4d34a901356b63ee3af2" Left="[float]7" MinHeight="[float]24" TabIndex="[int]2" Top="[float]278" Value="{ClusterBinding FieldName=Line\ number}" ValueFormatter="[string]LV:0" ValueType="[Type]UInt32" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="8fa19c05efd4d34a901356b63ee3af2" LabelOwner="[UIModel]fbc819be62da48c48889775c0a7c5cfb" Left="[float]7" Text="[string]Line number" Top="[float]258" Width="[float]67" />
+					</Cluster>
+					<Label Height="[float]16" Id="c2ff414e4f194295bfae6d24103cc3d5" LabelOwner="[UIModel]b0d4fbeb984247d9936a8c5f79007f4e" Left="[float]324" Text="[string]Test case" Top="[float]133" Width="[float]47" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="7344364c70d343f4a8fcbe7b7554aecf">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Probability" DataType="Double" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Expected Friendly Probability" DataType="@07957b1e6de344108eb39623f648886a" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Line number" DataType="UInt32" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="07957b1e6de344108eb39623f648886a">
+			<Attributed AttributedType="@70277cbbd2c34caabd0c2db072d3680a">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Gregstoll::ProbabilityToFriendlyString" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="70277cbbd2c34caabd0c2db072d3680a">
+			<Typedef TypedefName="Friendly Probability.gtype" UnderlyingType="@d3153c4ecb32419ab007dc21db038099" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="d3153c4ecb32419ab007dc21db038099">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Numerator" DataType="UInt8" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Denominator" DataType="UInt8" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Friendly String" DataType="String" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>
