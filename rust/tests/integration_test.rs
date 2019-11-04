@@ -15,7 +15,7 @@ fn all_cases() {
         let denominator = parts[2].parse::<u8>().expect("parsing denominator");
         let expected : FriendlyProbability;
         if parts.len() == 3 {
-            expected = FriendlyProbability::new_with_default_string(numerator, denominator);
+            expected = FriendlyProbability::new(numerator, denominator, None);
         } else if parts.len() == 4 {
             expected = FriendlyProbability::new(numerator, denominator, parts[3].to_string());
         } else {

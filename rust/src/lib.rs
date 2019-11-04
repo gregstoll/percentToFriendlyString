@@ -15,14 +15,13 @@ impl fmt::Display for FriendlyProbability {
     }
 }
 impl FriendlyProbability {
-    pub fn new_with_default_string(numerator: u8, denominator: u8) -> FriendlyProbability {
-        FriendlyProbability::new(numerator, denominator, format!("{} in {}", numerator, denominator))
-    }
-    pub fn new(numerator: u8, denominator: u8, friendly_string: String) -> FriendlyProbability {
+    // http://xion.io/post/code/rust-optional-args.html
+    pub fn new<T: Into<Option<String>>>(numerator: u8, denominator: u8, friendly_string: T) -> FriendlyProbability {
+        let real_friendly_string = friendly_string.into().unwrap_or_else(|| format!("{} in {}", numerator, denominator));
         FriendlyProbability {
             numerator,
             denominator,
-            friendly_string
+            friendly_string: real_friendly_string
         }
     }
     pub fn numerator(self: &FriendlyProbability) -> u8 {
@@ -37,7 +36,7 @@ impl FriendlyProbability {
 
     pub fn from_probability(probability: f32) -> FriendlyProbability {
         // TODO
-        FriendlyProbability::new_with_default_string(0, 1)
+        FriendlyProbability::new(0, 1, None)
     }
 }
 
@@ -76,8 +75,14 @@ mod tests {
     use super::*;
 
     #[test]
-    fn makeFriendlyProbability_FriendlyStringMatchesInputs() {
-        let fp = FriendlyProbability::new_with_default_string(1, 2);
+    fn friendly_probability_string_matches_numeric_inputs() {
+        let fp = FriendlyProbability::new(1, 2, None);
         assert_eq!("1 in 2", fp.friendly_string);
+    }
+    #[test]
+    fn friendly_probability_string_matches_string_input() {
+        let s = String::from("something weird");
+        let fp = FriendlyProbability::new(1, 2, s.clone());
+        assert_eq!(s, fp.friendly_string);
     }
 }
