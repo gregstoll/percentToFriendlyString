@@ -35,15 +35,38 @@ impl FriendlyProbability {
     }
 
     pub fn from_probability(probability: f32) -> FriendlyProbability {
+        if probability < 0.0 || probability > 1.0 {
+            panic!("probability is less than 0 or greater than 1!")
+        }
+        if probability == 0.0 {
+            return FriendlyProbability::new(0, 1, None)
+        }
+        if probability == 1.0 {
+            return FriendlyProbability::new(1, 1, None)
+        }
+        if probability > 0.99 {
+            return FriendlyProbability::new(99, 100, String::from(">99 in 100"))
+        }
+        if probability < 0.01 {
+            return FriendlyProbability::new(1, 100, String::from("<1 in 100"))
+        }
+        let data = &FRACTION_DATA;
+        let fraction_to_compare = Fraction::new_for_comparison(probability);
+        // use slice::binary_search_by since we can't derive Ord
+        // because f32's are not orderable
+        // https://stackoverflow.com/questions/28247990/how-to-do-a-binary-search-on-a-vec-of-floats
+        let location = data.binary_search_by(|f| {
+            f.partial_cmp(&fraction_to_compare).expect("Couldn't compare values?")
+        });
         // TODO
+        //match location {
+         //   OK(i) => 
+        //}
         FriendlyProbability::new(0, 1, None)
     }
 }
 
-// TODO - use slice::binary_search_by on these since we can't derive Ord
-// because f32's are not orderable
-// https://stackoverflow.com/questions/28247990/how-to-do-a-binary-search-on-a-vec-of-floats
-#[derive(PartialOrd, PartialEq)]
+#[derive(PartialOrd, PartialEq, Debug)]
 struct Fraction {
     value: f32,
     numerator: u8,
@@ -57,16 +80,38 @@ impl Fraction {
             value: numerator as f32/denominator as f32
         }
     }
+    fn new_for_comparison(value: f32) -> Fraction {
+        Fraction {
+            numerator: 0,
+            denominator: 0,
+            value
+        }
+    }
 }
 
 lazy_static! {
     static ref FRACTION_DATA: Vec<Fraction> = {
-        let mut d : Vec<Fraction> = Vec::new();
-        d.push(Fraction::new(1, 2));
+        let mut fractions : Vec<Fraction> = Vec::new();
+        fn gcd(x: u8, y: u8) -> u8 {
+            let mut x = x;
+            let mut y = y;
+            while y != 0 {
+                let t = y;
+                y = x % y;
+                x = t;
+            }
+            x
+        }
+        for d in 2..11 {
+            for n in 1..d {
+                if gcd(n, d) == 1 {
+                    fractions.push(Fraction::new(n, d));
+                }
+            }
+        }
         // TODO - more fractions
-        // TODO - make sure this is in ascending order
-        d.sort_unstable_by(|a,b| a.partial_cmp(b).unwrap());
-        d
+        fractions.sort_unstable_by(|a,b| a.partial_cmp(b).unwrap());
+        fractions
     };
 }
 
