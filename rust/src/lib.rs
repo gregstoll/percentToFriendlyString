@@ -19,7 +19,7 @@ impl fmt::Display for FriendlyProbability {
 }
 impl FriendlyProbability {
     // http://xion.io/post/code/rust-optional-args.html
-    /// Create a new FriendlyProbability
+    /// Create a new FriendlyProbability.  Most of the time you will want to use `from_probability()` instead.
     pub fn new<T: Into<Option<String>>>(numerator: u8, denominator: u8, friendly_string: T) -> FriendlyProbability {
         let real_friendly_string = friendly_string.into().unwrap_or_else(|| format!("{} in {}", numerator, denominator));
         FriendlyProbability {
@@ -28,15 +28,15 @@ impl FriendlyProbability {
             friendly_string: real_friendly_string
         }
     }
-    /// Gets the numerator of the FriendlyProbability
+    /// Gets the numerator of the FriendlyProbability.
     pub fn numerator(self: &FriendlyProbability) -> u8 {
         self.numerator
     }
-    /// Gets the denominator of the FriendlyProbability
+    /// Gets the denominator of the FriendlyProbability.
     pub fn denominator(self: &FriendlyProbability) -> u8 {
         self.denominator
     }
-    /// Gets the friendly string of the FriendlyProbability
+    /// Gets the friendly string of the FriendlyProbability.
     /// Usually this is the same as "{numerator} in {denominator}",
     /// but if the probability is very small it will instead be "<1 in 100",
     /// and if it's very large it will be ">99 in 100"
