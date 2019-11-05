@@ -2,6 +2,9 @@ use std::fmt;
 #[macro_use]
 extern crate lazy_static;
 
+/// A probability that can be expressed in a user-friendly form.
+/// The `friendly_string` property is a textual representation of
+/// the probability (i.e. "5 out of 7")
 #[derive(PartialEq, Eq, Debug)]
 pub struct FriendlyProbability {
     numerator: u8,
@@ -16,6 +19,7 @@ impl fmt::Display for FriendlyProbability {
 }
 impl FriendlyProbability {
     // http://xion.io/post/code/rust-optional-args.html
+    /// Create a new FriendlyProbability
     pub fn new<T: Into<Option<String>>>(numerator: u8, denominator: u8, friendly_string: T) -> FriendlyProbability {
         let real_friendly_string = friendly_string.into().unwrap_or_else(|| format!("{} in {}", numerator, denominator));
         FriendlyProbability {
@@ -24,16 +28,40 @@ impl FriendlyProbability {
             friendly_string: real_friendly_string
         }
     }
+    /// Gets the numerator of the FriendlyProbability
     pub fn numerator(self: &FriendlyProbability) -> u8 {
         self.numerator
     }
+    /// Gets the denominator of the FriendlyProbability
     pub fn denominator(self: &FriendlyProbability) -> u8 {
         self.denominator
     }
+    /// Gets the friendly string of the FriendlyProbability
+    /// Usually this is the same as "{numerator} in {denominator}",
+    /// but if the probability is very small it will instead be "<1 in 100",
+    /// and if it's very large it will be ">99 in 100"
     pub fn friendly_string(self: &FriendlyProbability) -> &str {
         &self.friendly_string
     }
-
+    /// Create a FriendlyProbability from an f32.
+    /// # Examples
+    /// 
+    /// ```
+    /// use probability_to_friendly_string::FriendlyProbability;
+    /// 
+    /// let friendly = FriendlyProbability::from_probability(0.723);
+    /// assert_eq!(5, friendly.numerator());
+    /// assert_eq!(7, friendly.denominator());
+    /// assert_eq!("5 in 7", friendly.friendly_string());
+    /// 
+    /// let friendly = FriendlyProbability::from_probability(0.999);
+    /// assert_eq!(">99 in 100", friendly.friendly_string());
+    /// 
+    /// let friendly = FriendlyProbability::from_probability(0.001);
+    /// assert_eq!("<1 in 100", friendly.friendly_string());
+    /// ```
+    /// # Panics
+    /// If probability is less than 0.0 or greater than 1.0.
     pub fn from_probability(probability: f32) -> FriendlyProbability {
         if probability < 0.0 || probability > 1.0 {
             panic!("probability is less than 0 or greater than 1!")
