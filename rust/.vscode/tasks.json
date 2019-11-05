@@ -6,10 +6,6 @@
         {
             "type": "cargo",
             "subcommand": "test",
-            "args": [
-                "--",
-                "--nocapture"
-            ],
             "problemMatcher": [
                 "$rustc"
             ],
