@@ -58,11 +58,28 @@ impl FriendlyProbability {
         let location = data.binary_search_by(|f| {
             f.partial_cmp(&fraction_to_compare).expect("Couldn't compare values?")
         });
-        // TODO
-        //match location {
-         //   OK(i) => 
-        //}
-        FriendlyProbability::new(0, 1, None)
+        fn friendly_probability_from_fraction(fraction: &Fraction) -> FriendlyProbability {
+            FriendlyProbability::new(fraction.numerator, fraction.denominator, None)
+        }
+        let data_len = data.len();
+        match location {
+            Ok(i) => friendly_probability_from_fraction(&data[i]),
+            Err(i) => {
+                // This means it could be inserted at index i
+                if i == 0 {
+                    return friendly_probability_from_fraction(&data[0]);
+                }
+                if i == data_len {
+                    return friendly_probability_from_fraction(&data[data_len - 1]);
+                }
+                if probability - (&data[i - 1]).value < (&data[i]).value - probability {
+                    return friendly_probability_from_fraction(&data[i - 1]);
+                }
+                else {
+                    return friendly_probability_from_fraction(&data[i]);
+                }
+            }
+        }
     }
 }
 
@@ -109,7 +126,10 @@ lazy_static! {
                 }
             }
         }
-        // TODO - more fractions
+        for &d in [12, 15, 20, 30, 40, 50, 60, 80, 100].iter() {
+            fractions.push(Fraction::new(1, d));
+            fractions.push(Fraction::new(d - 1, d));
+        }
         fractions.sort_unstable_by(|a,b| a.partial_cmp(b).unwrap());
         fractions
     };
