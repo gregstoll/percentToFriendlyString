@@ -178,4 +178,14 @@ mod tests {
         let fp = FriendlyProbability::new(1, 2, s.clone());
         assert_eq!(s, fp.friendly_string);
     }
+    #[test]
+    #[should_panic]
+    fn friendly_probability_from_fraction_less_than_0() {
+        FriendlyProbability::from_probability(-0.01);
+    }
+    #[test]
+    #[should_panic]
+    fn friendly_probability_from_fraction_greater_than_1() {
+        FriendlyProbability::from_probability(1.01);
+    }
 }
