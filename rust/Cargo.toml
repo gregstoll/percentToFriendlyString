@@ -3,6 +3,12 @@ name = "probability_to_friendly_string"
 version = "0.1.0"
 authors = ["Greg Stoll <greg@gregstoll.com>"]
 edition = "2018"
+license = "MIT"
+description = "Make probabilities more intuitive by converting them to odds. (i.e. 72.3% becomes \"5 in 7\")"
+keywords = ["probability", "odds"]
+categories = ["science"]
+homepage = "https://github.com/gregstoll/probabilityToFriendlyString"
+
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
