@@ -16,6 +16,8 @@ Make probabilities more intuitive by converting them to odds. (i.e. 72.3% become
 
 **PHP**: requires PHP 7.0 or above (tests require PHPUnit 6.5)
 
+**Rust**: on crates.io as [friendly_probability_to_string](https://crates.io/crates/probability_to_friendly_string), requires 2018 edition or later
+
 **LabVIEW NXG**: requires [LabVIEW NXG](https://ni.com/labview) 3.0 or later
 
 This project was inspired by [FiveThirtyEight's 2018 house forecast](https://projects.fivethirtyeight.com/2018-midterm-election-forecast/house/), where they use this friendlier way of showing probabilities.  I decided to reverse-engineer the algorithm they used and make it easily available to incorporate in other visualizations, etc.
