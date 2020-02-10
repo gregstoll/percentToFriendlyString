@@ -1,38 +1,55 @@
 'use strict';
 
 class FriendlyProbability {
-    constructor(numerator, denominator, friendlyString) {
+    constructor(numerator, denominator, friendlyDescription, friendlyString) {
         this.numerator = numerator;
         this.denominator = denominator;
+        this.friendlyDescription = friendlyDescription;
         this.friendlyString = friendlyString || (numerator + " in " + denominator);
     }
 
     toString() {
-        return this.numerator + "/" + this.denominator + " (text: \"" + this.friendlyString + "\")";
+        return this.numerator + "/" + this.denominator
+         + ', text: "' + this.friendlyString +
+          '", description: "' + this.friendlyDescription + '"';
     }
     equals(other) {
-        return this.numerator == other.numerator && this.denominator == other.denominator && this.friendlyString == other.friendlyString;
+        return this.numerator == other.numerator
+         && this.denominator == other.denominator
+         && this.friendlyDescription == other.friendlyDescription
+         && this.friendlyString == other.friendlyString;
     }
 
     static fromProbability(f) {
         if (f < 0 || f > 1) {
             throw new Error("out of range");
         }
+        let friendlyDescription = getFriendlyDescription(f);
         if (f == 0) {
-            return new FriendlyProbability(0, 1);
+            return new FriendlyProbability(0, 1, friendlyDescription);
         } 
         if (f == 1) {
-            return new FriendlyProbability(1, 1);
+            return new FriendlyProbability(1, 1, friendlyDescription);
         } 
         if (f > .99) {
-            return new FriendlyProbability(99, 100, ">99 in 100");
+            return new FriendlyProbability(99, 100, friendlyDescription, ">99 in 100");
         }
         if (f < .01) {
-            return new FriendlyProbability(1, 100, "<1 in 100");
+            return new FriendlyProbability(1, 100, friendlyDescription, "<1 in 100");
         }
+        let data = FriendlyProbability._fractionsData;
+        let right = binarySearch(data, f);
+        let left = right - 1;
+        if (left >= 0 && f - data[left][0] < data[right][0] - f) {
+            return new FriendlyProbability(data[left][1], data[left][2], friendlyDescription);
+        }
+        else {
+            return new FriendlyProbability(data[right][1], data[right][2], friendlyDescription);
+        }
+
         /**
-         *  * Return 0 <= i <= array.length such that array[i - 1] <= x && x <= array[i].
-         *   */
+         ** Return 0 <= i <= array.length such that array[i - 1] <= x && x <= array[i].
+         **/
         function binarySearch(array, x) {
             let lo = -1, hi = array.length;
             while (1 + lo < hi) {
@@ -45,14 +62,13 @@ class FriendlyProbability {
            }
            return hi;
         }
-        let data = FriendlyProbability._fractionsData;
-        let right = binarySearch(data, f);
-        let left = right - 1;
-        if (left >= 0 && f - data[left][0] < data[right][0] - f) {
-            return new FriendlyProbability(data[left][1], data[left][2]);
-        }
-        else {
-            return new FriendlyProbability(data[right][1], data[right][2]);
+
+        /**
+         ** Get the friendly description for the passed-in value
+         **/
+        function getFriendlyDescription(value) {
+            let index = binarySearch(FriendlyProbability._friendlyDescriptionValues, value);
+            return FriendlyProbability._friendlyDescriptionStrings[index+1];
         }
     }
 }
@@ -88,6 +104,24 @@ function initializeFractionsData() {
     }
     data.sort();
     FriendlyProbability._fractionsData = data;
+    FriendlyProbability._friendlyDescriptionValues = [
+        0.005, 0.02, 0.08, 0.15, 0.2, 0.45, 0.55, 0.7, 0.8, 0.85, 0.9, 0.95, 0.995];
+    FriendlyProbability._friendlyDescriptionStrings = [
+                    'Hard to imagine',
+                    'Barely possible',
+                    'Still possible',
+                    'Some chance',
+                    'Could happen',
+                    'Perhaps',
+                    'Flip a coin',
+                    'Likelier than not',
+                    'Good chance',
+                    'Probably',
+                    'Quite likely',
+                    'Pretty likely',
+                    'Very likely',
+                    'Almost certainly',
+                  ];
 }
 initializeFractionsData();
 

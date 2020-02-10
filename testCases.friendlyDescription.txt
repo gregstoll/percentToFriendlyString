@@ -1,0 +1,63 @@
+# Format:
+# (lines starting with # are ignored)
+# <input string>,<expected description>
+0,Hard to imagine
+.001,Hard to imagine
+.004,Hard to imagine
+.0051,Barely possible
+.0138,Barely possible
+.019,Barely possible
+.021,Still possible
+.04,Still possible
+.0501,Still possible
+.06,Still possible
+.08,Some chance
+.09,Some chance
+.101,Some chance
+.11,Some chance
+.12,Some chance
+.14,Some chance
+.1501,Could happen
+.16,Could happen
+.17,Could happen
+.18,Could happen
+.19,Could happen
+.195,Could happen
+.2001,Perhaps
+.21,Perhaps
+.22,Perhaps
+.27,Perhaps
+.29,Perhaps
+.33,Perhaps
+.35,Perhaps
+.36,Perhaps
+.37,Perhaps
+.39,Perhaps
+.44,Perhaps
+.4501,Flip a coin
+.46,Flip a coin
+.47,Flip a coin
+.5,Flip a coin
+.53,Flip a coin
+.54,Flip a coin
+.5501,Likelier than not
+.56,Likelier than not
+.61,Likelier than not
+.68,Likelier than not
+.701,Good chance
+.72,Good chance
+.74,Good chance
+.79,Good chance
+.801,Probably
+.83,Probably
+.84,Probably
+.851,Quite likely
+.87,Quite likely
+.89,Quite likely
+.901,Pretty likely
+.94,Pretty likely
+.9501,Very likely
+.9862,Very likely
+.994,Very likely
+.9951,Almost certainly
+1,Almost certainly
