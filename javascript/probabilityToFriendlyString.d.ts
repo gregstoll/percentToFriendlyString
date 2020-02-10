@@ -4,6 +4,7 @@ class FriendlyProbability {
     numerator: number;
     denominator: number;
     friendlyString: string;
+    friendlyDescription: string;
 
     toString(): string;
     equals(other: FriendlyProbability): boolean;
