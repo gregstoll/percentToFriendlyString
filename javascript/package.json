@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/gregstoll/probabilityToFriendlyString/issues"
   },
-  "homepage": "https://github.com/gregstoll/probabilityToFriendlyString#readme"
+  "homepage": "https://github.com/gregstoll/probabilityToFriendlyString#readme",
+  "scripts": {
+    "test": "node tests.js"
+  }
 }

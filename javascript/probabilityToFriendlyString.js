@@ -8,7 +8,7 @@ class FriendlyProbability {
     }
 
     toString() {
-        return this.numerator + "/" + this.denominator + " (text: \"" + this.friendlyString + "\")";
+        return this.numerator + "/" + this.denominator + ' (text: "' + this.friendlyString + '")';
     }
     equals(other) {
         return this.numerator == other.numerator && this.denominator == other.denominator && this.friendlyString == other.friendlyString;
