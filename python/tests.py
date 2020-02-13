@@ -24,13 +24,15 @@ class TestPercentToFriendlyString(unittest.TestCase):
 			return
 		parts = line.split(',')
 		if len(parts) == 3:
-			expected = probabilityToFriendlyString.FriendlyProbability(int(parts[1]), int(parts[2]))
+			expected = probabilityToFriendlyString.FriendlyProbability(int(parts[1]), int(parts[2]), None)
 		elif len(parts) == 4:
-			expected = probabilityToFriendlyString.FriendlyProbability(int(parts[1]), int(parts[2]), parts[3])
+			expected = probabilityToFriendlyString.FriendlyProbability(int(parts[1]), int(parts[2]), None, parts[3])
 		else:
 			self.fail("Line badly formatted: {0} (line {1})".format(line.strip(), lineNumber))
 		actual = probabilityToFriendlyString.FriendlyProbability.fromProbability(float(parts[0]))
-		self.assertEqual(expected, actual, "Called on {0} (line {1})".format(parts[0], lineNumber))
+		self.assertEqual(expected.numerator, actual.numerator, "Numerator mismatch, called on {0} (line {1}) actual {2}".format(parts[0], lineNumber, actual))
+		self.assertEqual(expected.denominator, actual.denominator, "Denominator mismatch, called on {0} (line {1}) actual {2}".format(parts[0], lineNumber, actual))
+		self.assertEqual(expected.friendlyString, actual.friendlyString, "Denominator mismatch, called on {0} (line {1}) actual {2}".format(parts[0], lineNumber, actual))
 
 	def lineTestFriendlyDescription(self, line, lineNumber):
 		line = line.strip()
