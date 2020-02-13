@@ -10,6 +10,14 @@ class TestPercentToFriendlyString(unittest.TestCase):
 				lineNumber += 1
 				self.lineTest(line, lineNumber)
 
+	def test_allFriendlyDescriptionCases(self):
+		testCasesPath = pathlib.Path(__file__).parent.parent.joinpath("testCases.friendlyDescription.txt")
+		with open(testCasesPath, 'r') as f:
+			lineNumber = 0
+			for line in f.readlines():
+				lineNumber += 1
+				self.lineTestFriendlyDescription(line, lineNumber)
+
 	def lineTest(self, line, lineNumber):
 		line = line.strip()
 		if line.startswith('#'):
@@ -24,6 +32,14 @@ class TestPercentToFriendlyString(unittest.TestCase):
 		actual = probabilityToFriendlyString.FriendlyProbability.fromProbability(float(parts[0]))
 		self.assertEqual(expected, actual, "Called on {0} (line {1})".format(parts[0], lineNumber))
 
-
+	def lineTestFriendlyDescription(self, line, lineNumber):
+		line = line.strip()
+		if line.startswith('#'):
+			return
+		parts = line.split(',')
+		expected = parts[1]
+		actual = probabilityToFriendlyString.FriendlyProbability.fromProbability(float(parts[0])).friendlyDescription
+		self.assertEqual(expected, actual, "Called on {0} (line {1})".format(parts[0], lineNumber))
+	
 if __name__ == '__main__':
 	unittest.main()
