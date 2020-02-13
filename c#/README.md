@@ -6,6 +6,7 @@ Usage:
     
 `friendly` is a struct of type `FriendlyProbability` that has properties
 - `FriendlyString`: a string representing the probability (in this case "5 in 7")
+- `FriendlyDescription`: a string representing a qualitative description of the probability ("Still possible", "Flip a coin", "Good chance", etc.)
 - `Numerator`: the numerator of the probability (in this case 5)
 - `Denominator`: the denominator of the probability (in this case 7)
 
