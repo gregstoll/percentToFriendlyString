@@ -1,6 +1,6 @@
 # probabilityToFriendlyString
 
-Make probabilities more intuitive by converting them to odds. (i.e. 72.3% becomes "5 in 7")
+Make probabilities more intuitive by converting them to odds. (i.e. 72.3% becomes "5 in 7")  Also includes a qualitiative description like "Still possible", "Flip a coin", "Good chance", etc.
 
 [Live demo here](https://gregstoll.github.io/probabilityToFriendlyString/)
 
@@ -20,4 +20,4 @@ Make probabilities more intuitive by converting them to odds. (i.e. 72.3% become
 
 **LabVIEW NXG**: requires [LabVIEW NXG](https://ni.com/labview) 3.0 or later
 
-This project was inspired by [FiveThirtyEight's 2018 house forecast](https://projects.fivethirtyeight.com/2018-midterm-election-forecast/house/), where they use this friendlier way of showing probabilities.  I decided to reverse-engineer the algorithm they used and make it easily available to incorporate in other visualizations, etc.
+This project was inspired by [FiveThirtyEight's 2018 house forecast](https://projects.fivethirtyeight.com/2018-midterm-election-forecast/house/), where they use this friendlier way of showing probabilities.  I decided to reverse-engineer the algorithm they used and make it easily available to incorporate in other visualizations, etc.  The qualitative descriptions are from the [New York Times live election results in 2020](https://www.nytimes.com/interactive/2020/02/03/us/elections/results-iowa-caucus-live-forecast.html).
