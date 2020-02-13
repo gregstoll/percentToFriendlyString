@@ -23,6 +23,27 @@ namespace Gregstoll.ProbabilityToFriendlyString
         {
         }
 
+
+        private static List<double> _friendlyDescriptionValues = new List<double>(new double[] {0.005, 0.02, 0.08, 0.15, 0.2, 0.45, 0.55, 0.7, 0.8, 0.85, 0.9, 0.95, 0.995});
+
+        private static string[] _friendlyDescriptionStrings = {
+            "Hard to imagine",
+            "Barely possible",
+            "Still possible",
+            "Some chance",
+            "Could happen",
+            "Perhaps",
+            "Flip a coin",
+            "Likelier than not",
+            "Good chance",
+            "Probably",
+            "Quite likely",
+            "Pretty likely",
+            "Very likely",
+            "Almost certainly"
+        };
+
+
         private static Lazy<List<Tuple<double, byte, byte>>> _fractionData = new Lazy<List<Tuple<double, byte, byte>>>(() =>
         {
             var data = new List<Tuple<double, byte, byte>>();
@@ -74,8 +95,18 @@ namespace Gregstoll.ProbabilityToFriendlyString
             {
                 throw new ArgumentOutOfRangeException("probability must be between 0 and 1!");
             }
-            //TODO
-            string friendlyDescription = string.Empty;
+            int friendlyDescriptionIndex = _friendlyDescriptionValues.BinarySearch(prob);
+            // Per the documentation, if it's not found the return value is the bitwise complement
+            // of the index of the next element that's larger than the item.
+            if (friendlyDescriptionIndex < 0)
+            {
+                friendlyDescriptionIndex = ~friendlyDescriptionIndex;
+            }
+            else
+            {
+                friendlyDescriptionIndex = friendlyDescriptionIndex + 1;
+            }
+            string friendlyDescription = _friendlyDescriptionStrings[friendlyDescriptionIndex];
             if (prob == 0)
             {
                 return new FriendlyProbability(0, 1, friendlyDescription);
