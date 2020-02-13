@@ -10,8 +10,9 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>probability, odds</PackageTags>
     <PackageReleaseNotes>Initial release</PackageReleaseNotes>
-    <PackageLicenseUrl>https://github.com/gregstoll/probabilityToFriendlyString/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
 </Project>
