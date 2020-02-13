@@ -7,16 +7,19 @@ namespace Gregstoll.ProbabilityToFriendlyString
     {
         public byte Numerator { get; }
         public byte Denominator { get; }
+        public string FriendlyDescription { get; }
         public string FriendlyString { get; }
 
-        public FriendlyProbability(byte numerator, byte denominator, string friendlyString)
+        public FriendlyProbability(byte numerator, byte denominator, string friendlyDescription, string friendlyString)
         {
             Numerator = numerator;
             Denominator = denominator;
+            FriendlyDescription = friendlyDescription;
             FriendlyString = friendlyString;
         }
 
-        public FriendlyProbability(byte numerator, byte denominator) : this(numerator, denominator, string.Format("{0} in {1}", numerator, denominator))
+        public FriendlyProbability(byte numerator, byte denominator, string friendlyDescription) :
+            this(numerator, denominator, friendlyDescription, string.Format("{0} in {1}", numerator, denominator))
         {
         }
 
@@ -71,21 +74,23 @@ namespace Gregstoll.ProbabilityToFriendlyString
             {
                 throw new ArgumentOutOfRangeException("probability must be between 0 and 1!");
             }
+            //TODO
+            string friendlyDescription = string.Empty;
             if (prob == 0)
             {
-                return new FriendlyProbability(0, 1);
+                return new FriendlyProbability(0, 1, friendlyDescription);
             }
             if (prob == 1)
             {
-                return new FriendlyProbability(1, 1);
+                return new FriendlyProbability(1, 1, friendlyDescription);
             }
             if (prob > 0.99)
             {
-                return new FriendlyProbability(99, 100, ">99 in 100");
+                return new FriendlyProbability(99, 100, friendlyDescription, ">99 in 100");
             }
             if (prob < 0.01)
             {
-                return new FriendlyProbability(1, 100, "<1 in 100");
+                return new FriendlyProbability(1, 100, friendlyDescription, "<1 in 100");
             }
 
             var data = _fractionData.Value;
@@ -93,7 +98,7 @@ namespace Gregstoll.ProbabilityToFriendlyString
             if (position >= 0)
             {
                 // exact match
-                return new FriendlyProbability(data[position].Item2, data[position].Item3);
+                return new FriendlyProbability(data[position].Item2, data[position].Item3, friendlyDescription);
             }
             // Per the documentation, if it's not found the return value is the bitwise complement
             // of the index of the next element that's larger than the item.
@@ -102,11 +107,11 @@ namespace Gregstoll.ProbabilityToFriendlyString
                 || (nextLargerPosition - 1 >= 0
                     && prob - data[nextLargerPosition - 1].Item1 < data[nextLargerPosition].Item1 - prob))
             {
-                return new FriendlyProbability(data[nextLargerPosition - 1].Item2, data[nextLargerPosition - 1].Item3);
+                return new FriendlyProbability(data[nextLargerPosition - 1].Item2, data[nextLargerPosition - 1].Item3, friendlyDescription);
             }
             else
             {
-                return new FriendlyProbability(data[nextLargerPosition].Item2, data[nextLargerPosition].Item3);
+                return new FriendlyProbability(data[nextLargerPosition].Item2, data[nextLargerPosition].Item3, friendlyDescription);
             }
         }
 
