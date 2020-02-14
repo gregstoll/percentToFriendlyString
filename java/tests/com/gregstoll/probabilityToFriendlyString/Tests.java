@@ -54,10 +54,10 @@ public class Tests {
             String[] parts = line.split(",");
             double input = Double.parseDouble(parts[0]);
             if (parts.length == 3) {
-                testCases.add(new TestCase(lineNumber, input, new FriendlyProbability(Byte.parseByte(parts[1]), Byte.parseByte(parts[2]))));
+                testCases.add(new TestCase(lineNumber, input, new FriendlyProbability(Byte.parseByte(parts[1]), Byte.parseByte(parts[2]), "")));
             }
             else if (parts.length == 4) {
-                testCases.add(new TestCase(lineNumber, input, new FriendlyProbability(Byte.parseByte(parts[1]), Byte.parseByte(parts[2]), parts[3])));
+                testCases.add(new TestCase(lineNumber, input, new FriendlyProbability(Byte.parseByte(parts[1]), Byte.parseByte(parts[2]), "", parts[3])));
             }
             else {
                 throw new IOException(String.format("line %d improperly formatted: %s", lineNumber, line));
@@ -67,7 +67,9 @@ public class Tests {
         bufferedReader.close();
         for (TestCase testCase : testCases) {
             FriendlyProbability actual = FriendlyProbability.fromProbability(testCase.getInput());
-            assertEquals(String.format("line %d", testCase.getLineNumber()), testCase.getOutput(), actual);
+            assertEquals(String.format("numerator on line %d", testCase.getLineNumber()), testCase.getOutput().getNumerator(), actual.getNumerator());
+            assertEquals(String.format("denominator on line %d", testCase.getLineNumber()), testCase.getOutput().getDenominator(), actual.getDenominator());
+            assertEquals(String.format("friendlyString on line %d", testCase.getLineNumber()), testCase.getOutput().getFriendlyString(), actual.getFriendlyString());
         }
     }
 }
