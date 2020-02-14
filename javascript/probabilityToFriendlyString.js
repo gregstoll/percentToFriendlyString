@@ -38,7 +38,7 @@ class FriendlyProbability {
             return new FriendlyProbability(1, 100, friendlyDescription, "<1 in 100");
         }
         let data = FriendlyProbability._fractionsData;
-        let right = binarySearch(data, f);
+        let right = binarySearch(data, x => x[0], f);
         let left = right - 1;
         if (left >= 0 && f - data[left][0] < data[right][0] - f) {
             return new FriendlyProbability(data[left][1], data[left][2], friendlyDescription);
@@ -50,11 +50,11 @@ class FriendlyProbability {
         /**
          ** Return 0 <= i <= array.length such that array[i - 1] <= x && x <= array[i].
          **/
-        function binarySearch(array, x) {
+        function binarySearch(array, arrayGetElemFunc, x) {
             let lo = -1, hi = array.length;
             while (1 + lo < hi) {
                 const mi = lo + ((hi - lo) >> 1);
-                if (x <= array[mi][0]) {
+                if (x <= arrayGetElemFunc(array[mi])) {
                     hi = mi;
                 } else {
                     lo = mi;
@@ -67,8 +67,12 @@ class FriendlyProbability {
          ** Get the friendly description for the passed-in value
          **/
         function getFriendlyDescription(value) {
-            let index = binarySearch(FriendlyProbability._friendlyDescriptionValues, value);
-            return FriendlyProbability._friendlyDescriptionStrings[index+1];
+            let index = binarySearch(FriendlyProbability._friendlyDescriptionValues, x => x, value);
+            if (FriendlyProbability._friendlyDescriptionValues[index] === value)
+            {
+                ++index;
+            }
+            return FriendlyProbability._friendlyDescriptionStrings[index];
         }
     }
 }

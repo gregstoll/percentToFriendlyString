@@ -31,8 +31,8 @@ fs.readFile("../testCases.friendlyDescription.txt", "utf8", function(error, data
         let parts = line.split(",");
         let expected = parts[1];
         let actual = FriendlyProbability.fromProbability(parseFloat(parts[0]));
-        if (expected.friendlyDescription !== actual.friendlyDescription) {
-            throw new Error("friendlyDescription: expected: " + expected.friendlyDescription + " actual: " + actual.friendlyDescription + " for \"" + line + "\" (line " + (i+1) + ")"); 
+        if (expected !== actual.friendlyDescription) {
+            throw new Error("friendlyDescription: expected: " + expected + " actual: " + actual.friendlyDescription + " for \"" + line + "\" (line " + (i+1) + ")"); 
         }
     }
 });
