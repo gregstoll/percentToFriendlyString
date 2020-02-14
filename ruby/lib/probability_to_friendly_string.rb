@@ -5,6 +5,24 @@ module ProbabilityToFriendlyString
         attr_reader :numerator, :denominator, :friendlyDescription, :friendlyString
 
         @@fractionsData = nil
+        @@friendlyDescriptionValues = [0.005, 0.02, 0.08, 0.15, 0.2, 0.45, 0.55, 0.7, 0.8, 0.85, 0.9, 0.95, 0.995]
+        @@friendlyDescriptionStrings = [
+            "Hard to imagine",
+            "Barely possible",
+            "Still possible",
+            "Some chance",
+            "Could happen",
+            "Perhaps",
+            "Flip a coin",
+            "Likelier than not",
+            "Good chance",
+            "Probably",
+            "Quite likely",
+            "Pretty likely",
+            "Very likely",
+            "Almost certainly",
+		]
+
         def initialize(numerator, denominator, friendlyDescription, friendlyString = nil)
             @numerator = numerator
             @denominator = denominator
@@ -46,7 +64,12 @@ module ProbabilityToFriendlyString
             if f < 0 or f > 1
                 raise RangeError, "f is less than 0 or greater than 1"
             end
-            friendlyDescription = nil
+            # index of the least element > f
+            index = @@friendlyDescriptionValues.bsearch_index {|x| x > f}
+            if index.nil?
+                index = @@friendlyDescriptionStrings.length - 1
+            end
+            friendlyDescription = @@friendlyDescriptionStrings[index]
             if f == 0
                 return FriendlyProbability.new 0, 1, friendlyDescription
             elsif f == 1
