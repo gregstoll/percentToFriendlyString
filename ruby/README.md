@@ -1,4 +1,4 @@
-Gem [probability_to_friendly_string](https://rubygems.org/gems/probability_to_friendly_string), requires Ruby 2.3.1 or above.
+Gem [probability_to_friendly_string](https://rubygems.org/gems/probability_to_friendly_string), requires Ruby 2.5.1 or above.
 
 Usage:
 
@@ -7,6 +7,7 @@ Usage:
     
 `friendly` is a class of type `FriendlyProbability` that has properties
 - `friendlyString`: a string representing the probability (in this case "5 in 7")
+- `friendlyDescription`: a string representing a qualitative description of the probability (in this case "Good chance")
 - `numerator`: the numerator of the probability (in this case 5)
 - `denominator`: the denominator of the probability (in this case 7)
 
