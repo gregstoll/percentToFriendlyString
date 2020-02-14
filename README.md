@@ -10,7 +10,7 @@ Make probabilities more intuitive by converting them to odds. (i.e. 72.3% become
 
 **C#**: on NuGet: [ProbabilityToFriendlyString](https://www.nuget.org/packages/ProbabilityToFriendlyString/) (.NET Standard 2.0)
 
-**Java**: built with JDK 8
+**Java**: built with JDK 11
 
 **Ruby**: gem [probability_to_friendly_string](https://rubygems.org/gems/probability_to_friendly_string), requires Ruby 2.3.1 or above
 

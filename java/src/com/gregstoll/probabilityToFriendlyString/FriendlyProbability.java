@@ -1,5 +1,6 @@
 package com.gregstoll.probabilityToFriendlyString;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Objects;
 import java.math.BigInteger;
@@ -35,7 +36,7 @@ public class FriendlyProbability {
 
         @Override
         public int compareTo(Fraction other) {
-            return new Double(_value).compareTo(new Double(other._value));
+            return Double.valueOf(_value).compareTo(Double.valueOf(other._value));
         }
 
         @Override
@@ -55,6 +56,23 @@ public class FriendlyProbability {
     }
 
     private static ArrayList<Fraction> _fractions = null;
+    private static double[] _friendlyDescriptionValues = new double[] {0.005, 0.02, 0.08, 0.15, 0.2, 0.45, 0.55, 0.7, 0.8, 0.85, 0.9, 0.95, 0.995 };
+	private static ArrayList<String>_friendlyDescriptionStrings = new ArrayList<String>(Arrays.asList(
+		"Hard to imagine",
+		"Barely possible",
+		"Still possible",
+		"Some chance",
+		"Could happen",
+		"Perhaps",
+		"Flip a coin",
+		"Likelier than not",
+		"Good chance",
+		"Probably",
+		"Quite likely",
+		"Pretty likely",
+		"Very likely",
+		"Almost certainly"));
+
 
     private static void populateFractionsIfNecessary() {
         if (_fractions == null) {
@@ -92,7 +110,17 @@ public class FriendlyProbability {
         if (prob < 0 || prob > 1) {
             throw new IllegalArgumentException("probability must be between 0 and 1!");
         }
-        String friendlyDescription = null;
+        int friendlyDescriptionIndex = Arrays.binarySearch(_friendlyDescriptionValues, prob);
+        if (friendlyDescriptionIndex >= 0) {
+            // exact match
+            friendlyDescriptionIndex = friendlyDescriptionIndex + 1;
+        }
+        else {
+            // otherwise, (-(insertion point) – 1)
+            friendlyDescriptionIndex = -friendlyDescriptionIndex - 1;
+        }
+        String friendlyDescription = _friendlyDescriptionStrings.get(friendlyDescriptionIndex);
+
         if (prob == 0) {
             return new FriendlyProbability((byte)0, (byte)1, friendlyDescription);
         }
