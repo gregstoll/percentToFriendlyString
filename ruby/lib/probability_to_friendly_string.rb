@@ -2,12 +2,31 @@ module ProbabilityToFriendlyString
     # Represents probability represented in a friendly manner.
     class FriendlyProbability
         include Comparable
-        attr_reader :numerator, :denominator, :friendlyString
+        attr_reader :numerator, :denominator, :friendlyDescription, :friendlyString
 
         @@fractionsData = nil
-        def initialize(numerator, denominator, friendlyString = nil)
+        @@friendlyDescriptionValues = [0.005, 0.02, 0.08, 0.15, 0.2, 0.45, 0.55, 0.7, 0.8, 0.85, 0.9, 0.95, 0.995]
+        @@friendlyDescriptionStrings = [
+            "Hard to imagine",
+            "Barely possible",
+            "Still possible",
+            "Some chance",
+            "Could happen",
+            "Perhaps",
+            "Flip a coin",
+            "Likelier than not",
+            "Good chance",
+            "Probably",
+            "Quite likely",
+            "Pretty likely",
+            "Very likely",
+            "Almost certainly",
+		]
+
+        def initialize(numerator, denominator, friendlyDescription, friendlyString = nil)
             @numerator = numerator
             @denominator = denominator
+            @friendlyDescription = friendlyDescription
             if friendlyString
                 @friendlyString = friendlyString 
             else
@@ -45,14 +64,20 @@ module ProbabilityToFriendlyString
             if f < 0 or f > 1
                 raise RangeError, "f is less than 0 or greater than 1"
             end
+            # index of the least element > f
+            index = @@friendlyDescriptionValues.bsearch_index {|x| x > f}
+            if index.nil?
+                index = @@friendlyDescriptionStrings.length - 1
+            end
+            friendlyDescription = @@friendlyDescriptionStrings[index]
             if f == 0
-                return FriendlyProbability.new 0, 1
+                return FriendlyProbability.new 0, 1, friendlyDescription
             elsif f == 1
-                return FriendlyProbability.new 1, 1
+                return FriendlyProbability.new 1, 1, friendlyDescription
             elsif f > 0.99
-                return FriendlyProbability.new 99, 100, ">99 in 100"
+                return FriendlyProbability.new 99, 100, friendlyDescription, ">99 in 100"
             elsif f < 0.01
-                return FriendlyProbability.new 1, 100, "<1 in 100"
+                return FriendlyProbability.new 1, 100, friendlyDescription, "<1 in 100"
             end
 
             FriendlyProbability._createFractionsData
@@ -64,14 +89,14 @@ module ProbabilityToFriendlyString
                 left = @@fractionsData.length - 1
             end
             if (left == (@@fractionsData.length - 1) or (left >= 0 and f - @@fractionsData[left][0] < @@fractionsData[right][0] - f))
-                return FriendlyProbability.new @@fractionsData[left][1], @@fractionsData[left][2]
+                return FriendlyProbability.new @@fractionsData[left][1], @@fractionsData[left][2], friendlyDescription
             else
-                return FriendlyProbability.new @@fractionsData[right][1], @@fractionsData[right][2]
+                return FriendlyProbability.new @@fractionsData[right][1], @@fractionsData[right][2], friendlyDescription
             end
         end
 
         def to_s
-            return "#{@numerator}/#{@denominator} (text: \"#{@friendlyString}\")"
+            return "#{@numerator}/#{@denominator} (text: \"#{@friendlyString}\", description: \"#{@friendlyDescription}\")"
         end
 
         def <=>(another_friendly_string)
@@ -85,7 +110,12 @@ module ProbabilityToFriendlyString
             elsif self.denominator > another_friendly_string.denominator
                 1
             end
-            if self.friendlyString < another_friendly_string.friendlyString
+            if self.friendlyDescription < another_friendly_string.friendlyDescription
+                -1
+            elsif self.friendlyDescription > another_friendly_string.friendlyDescription
+                1
+            end
+             if self.friendlyString < another_friendly_string.friendlyString
                 -1
             elsif self.friendlyString > another_friendly_string.friendlyString
                 1
