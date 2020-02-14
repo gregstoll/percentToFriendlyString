@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="60CDB65288F3D50C66C9EFA126A4605D99BDC86912FEFD38008C2D64B05B355C46ECA380EC74AA3E8608A9BC2965E0B5CD4DF8F9796D75EDCF4FB98D13D0182F" Timestamp="1D5E37B8D8C8CFD" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="8879C90F25AB6B3AFE76DA732EDB797CD7A2D57235C95D4049E85E4E1157A8DC429DB6DA4F2126A875F464795483C642C3804A5C42F014DF3B3CBD73B300DB74" Timestamp="1D5E37DC9F1B7FB" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="7.1.0.50148" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="7.1.0.49152" Version="7.1.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="7.1.0.50148" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="7.1.0.49153" Version="7.1.0.49153" />
@@ -23,22 +23,23 @@
 				</Cluster>
 			</p.DefaultValue>
 		</DataItem>
-		<TypeDefinitionMemberFunction AccessScope="Public" HintSignature="@a2382422036e427587a2a7554db7af17" Id="ef7bafcf0f794d288477d79ad249e054" Target="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype::Create.gvi" xmlns="http://www.ni.com/PlatformFramework" />
-		<TypeDefinitionMemberFunction AccessScope="Public" HintSignature="@3465201e2acc4d7aa7d979c03daa339a" Id="9373cf310b52459a9d8260552d072a23" Target="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype::To string.gvi" xmlns="http://www.ni.com/PlatformFramework" />
-		<TypeDefinitionMemberFunction AccessScope="Private" HintSignature="@9cf22ec86047494e97073a3822773524" Id="697bbc820965486abfb9a26a85f1c7f3" Target="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype::From double core.gvi" xmlns="http://www.ni.com/PlatformFramework" />
-		<TypeDefinitionMemberFunction AccessScope="Public" HintSignature="@7fd80f37a09f4e63a992a21a4f1ace28" Id="de02aa492e294d09a898ade670ca0082" Target="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype::From double.gvi" xmlns="http://www.ni.com/PlatformFramework" />
+		<TypeDefinitionMemberFunction AccessScope="Public" HintSignature="@9e20cd5206aa4f23ad39bd1cfde39889" Id="ef7bafcf0f794d288477d79ad249e054" Target="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype::Create.gvi" xmlns="http://www.ni.com/PlatformFramework" />
+		<TypeDefinitionMemberFunction AccessScope="Public" HintSignature="@67a6233c00ca462a9b47516561bf5e7d" Id="9373cf310b52459a9d8260552d072a23" Target="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype::To string.gvi" xmlns="http://www.ni.com/PlatformFramework" />
+		<TypeDefinitionMemberFunction AccessScope="Private" HintSignature="@439a630cee75467face424458b154d8d" Id="697bbc820965486abfb9a26a85f1c7f3" Target="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype::From double core.gvi" xmlns="http://www.ni.com/PlatformFramework" />
+		<TypeDefinitionMemberFunction AccessScope="Public" HintSignature="@2474d05bd0d54eb882d4927b06e1fc7f" Id="de02aa492e294d09a898ade670ca0082" Target="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype::From double.gvi" xmlns="http://www.ni.com/PlatformFramework" />
 		<TypeDefinitionMemberProperty Id="d7b7c7a399054b7ca615c022dac0b1af" MemberPropertyName="Numerator">
-			<TypeDefinitionMemberFunction AccessScope="Public" HintSignature="@38755f843ce04a2f8e0d0f7374e22d3a" Id="4900688bcf0445b484f59cbf3dc18a1a" Target="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype::Read Numerator.gvi" xmlns="http://www.ni.com/PlatformFramework" />
+			<TypeDefinitionMemberFunction AccessScope="Public" HintSignature="@ef9d717505c24ca6ac23198b61cf30a5" Id="4900688bcf0445b484f59cbf3dc18a1a" Target="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype::Read Numerator.gvi" xmlns="http://www.ni.com/PlatformFramework" />
 		</TypeDefinitionMemberProperty>
 		<TypeDefinitionMemberProperty Id="b4d25371d098460cbf93e9f4f9c1e512" MemberPropertyName="Denominator">
-			<TypeDefinitionMemberFunction AccessScope="Public" HintSignature="@8d64292dad574b9fa1e43d3491ad960d" Id="6e8cff8d38ba4434bea1fead74eeb831" Target="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype::Read Denominator.gvi" xmlns="http://www.ni.com/PlatformFramework" />
+			<TypeDefinitionMemberFunction AccessScope="Public" HintSignature="@3e08d54141f24f508c522fa510f1f9c3" Id="6e8cff8d38ba4434bea1fead74eeb831" Target="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype::Read Denominator.gvi" xmlns="http://www.ni.com/PlatformFramework" />
 		</TypeDefinitionMemberProperty>
 		<TypeDefinitionMemberProperty Id="700151d837b6482d8e1f2f421e03e588" MemberPropertyName="Friendly String">
-			<TypeDefinitionMemberFunction AccessScope="Public" HintSignature="@9c513d890d794d71b2adc4f170e4c110" Id="c6cb18ba6f64e38b5cea4e54998c92d" Target="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype::Read Friendly String.gvi" xmlns="http://www.ni.com/PlatformFramework" />
+			<TypeDefinitionMemberFunction AccessScope="Public" HintSignature="@a0aefc93a53c475b84f01c7feebdd178" Id="c6cb18ba6f64e38b5cea4e54998c92d" Target="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype::Read Friendly String.gvi" xmlns="http://www.ni.com/PlatformFramework" />
 		</TypeDefinitionMemberProperty>
 		<TypeDefinitionMemberProperty Id="c343ed15d39543f98d2c4630a782179f" MemberPropertyName="Friendly Description">
-			<TypeDefinitionMemberFunction AccessScope="Public" HintSignature="@f7f507a7515d4cc79c2e5e2b4edeaeb1" Id="c0d9e6b322f24a368988a0fef1b6c06b" Target="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype::Read Friendly Description.gvi" xmlns="http://www.ni.com/PlatformFramework" />
+			<TypeDefinitionMemberFunction AccessScope="Public" HintSignature="@ed88920775b8488f8e5c8f1cdcfc4836" Id="c0d9e6b322f24a368988a0fef1b6c06b" Target="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype::Read Friendly Description.gvi" xmlns="http://www.ni.com/PlatformFramework" />
 		</TypeDefinitionMemberProperty>
+		<TypeDefinitionMemberFunction AccessScope="Public" HintSignature="@5c190b7e6c564e7c819eb9dc964ab510" Id="5f2a8494c11048d2bb5899d9926cdfe9" Target="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype::Get Friendly Description.gvi" xmlns="http://www.ni.com/PlatformFramework" />
 	</TypeDefinition>
 	<EnvoyManagerFile Id="da667c7ff8254fad9b79935c65145143" xmlns="http://www.ni.com/PlatformFramework">
 		<EnvoyManagerRootEnvoy Id="c3c59d2b466b45aeab8b467a151fd3ce" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
@@ -66,6 +67,7 @@
 			<SourceFileReference Id="91aa3426e7f148918d9cf3e217cbcc77" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Read Denominator.gvi" StoragePath="Read Denominator.gvi" />
 			<SourceFileReference Id="edcdb20407ca444f84eedfcb7b764ecb" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Read Friendly String.gvi" StoragePath="Read Friendly String.gvi" />
 			<SourceFileReference Id="93e787754ccc47b793dcecb046099466" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Read Friendly Description.gvi" StoragePath="Read Friendly Description.gvi" />
+			<SourceFileReference Id="bfa79e6c3d9a45ecb963485303c10685" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Get Friendly Description.gvi" StoragePath="Get Friendly Description.gvi" />
 		</NameScopingEnvoy>
 	</EnvoyManagerFile>
 	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
@@ -82,49 +84,40 @@
 				</Members>
 			</Composite>
 		</p.TypeReference>
-		<p.TypeReference TypeId="a2382422036e427587a2a7554db7af17">
-			<Attributed AttributedType="@ef6fffa6ed7a4b808cba1d677fb75b15">
+		<p.TypeReference TypeId="9e20cd5206aa4f23ad39bd1cfde39889">
+			<Attributed AttributedType="@25a75449515640c8a7f9aff47475d1c0">
 				<AttributeValues>
 					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
 					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="3465201e2acc4d7aa7d979c03daa339a">
-			<Attributed AttributedType="@ccb02781bcfa43478b20431fb6c9f400">
+		<p.TypeReference TypeId="67a6233c00ca462a9b47516561bf5e7d">
+			<Attributed AttributedType="@2fc8b24fafc8472d83d2e2c998ce5be8">
 				<AttributeValues>
 					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
 					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="9cf22ec86047494e97073a3822773524">
-			<Attributed AttributedType="@416c4a57a21c4f13a3a6657fcaf1a8ea">
+		<p.TypeReference TypeId="439a630cee75467face424458b154d8d">
+			<Attributed AttributedType="@418c479c1e184c92960c87f49157226c">
 				<AttributeValues>
 					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
 					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="7fd80f37a09f4e63a992a21a4f1ace28">
-			<Attributed AttributedType="@19d7e17c8e0f42039773b5d7c5d9fac7">
+		<p.TypeReference TypeId="2474d05bd0d54eb882d4927b06e1fc7f">
+			<Attributed AttributedType="@e44b08f6841c44b993da221a17ed9e72">
 				<AttributeValues>
 					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
 					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="38755f843ce04a2f8e0d0f7374e22d3a">
-			<Attributed AttributedType="@7df26a2c78904ecb8ab7f4d71fcf3031">
-				<AttributeValues>
-					<AttributeValue Name="NationalInstruments.Compiler.ThrallMap" Value="[ThrallMapAttributeValue]R0:[L0]" />
-					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
-					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
-				</AttributeValues>
-			</Attributed>
-		</p.TypeReference>
-		<p.TypeReference TypeId="8d64292dad574b9fa1e43d3491ad960d">
-			<Attributed AttributedType="@e72e614956d44553899201e282d755ad">
+		<p.TypeReference TypeId="ef9d717505c24ca6ac23198b61cf30a5">
+			<Attributed AttributedType="@794c93db6b644c4ba4014a7e72d8ec4f">
 				<AttributeValues>
 					<AttributeValue Name="NationalInstruments.Compiler.ThrallMap" Value="[ThrallMapAttributeValue]R0:[L0]" />
 					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
@@ -132,8 +125,8 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="9c513d890d794d71b2adc4f170e4c110">
-			<Attributed AttributedType="@7fd66df35c1d44909a28718ea3fad2b8">
+		<p.TypeReference TypeId="3e08d54141f24f508c522fa510f1f9c3">
+			<Attributed AttributedType="@69df9b346c1a4ba192ffa266e109f2c2">
 				<AttributeValues>
 					<AttributeValue Name="NationalInstruments.Compiler.ThrallMap" Value="[ThrallMapAttributeValue]R0:[L0]" />
 					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
@@ -141,8 +134,8 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="f7f507a7515d4cc79c2e5e2b4edeaeb1">
-			<Attributed AttributedType="@2c6e5427293f4235a4e9a154cf8c4241">
+		<p.TypeReference TypeId="a0aefc93a53c475b84f01c7feebdd178">
+			<Attributed AttributedType="@71db4c55cf0d48b7ab006574636ae196">
 				<AttributeValues>
 					<AttributeValue Name="NationalInstruments.Compiler.ThrallMap" Value="[ThrallMapAttributeValue]R0:[L0]" />
 					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
@@ -150,8 +143,25 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="ef6fffa6ed7a4b808cba1d677fb75b15">
-			<Function Id="1" IsStatic="True" IsConstructor="False" Name="Create.gvi" ReturnType="Void" DeclaringType="@845b856235ab4a2da5e14975fddf1583" GenericTypeDefinition="Void">
+		<p.TypeReference TypeId="ed88920775b8488f8e5c8f1cdcfc4836">
+			<Attributed AttributedType="@d5867342c5a74c68888ef2f7d7bd6924">
+				<AttributeValues>
+					<AttributeValue Name="NationalInstruments.Compiler.ThrallMap" Value="[ThrallMapAttributeValue]R0:[L0]" />
+					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
+					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="5c190b7e6c564e7c819eb9dc964ab510">
+			<Attributed AttributedType="@5bfd4e9767e346808b312abd8fc56190">
+				<AttributeValues>
+					<AttributeValue Name="NI.ConnectorPaneHeight" Value="[int]40" />
+					<AttributeValue Name="NI.ConnectorPaneWidth" Value="[int]40" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="25a75449515640c8a7f9aff47475d1c0">
+			<Function Id="1" IsStatic="True" IsConstructor="False" Name="Create.gvi" ReturnType="Void" DeclaringType="@3e7b14ce2e134882a4a467643d7eace6" GenericTypeDefinition="Void">
 				<Parameters>
 					<Attributed AttributedType="@f0963f05a6ae45acb28f95ca2af3e079">
 						<AttributeValues>
@@ -168,7 +178,7 @@
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Friendly String" />
 						</AttributeValues>
 					</Attributed>
-					<Attributed AttributedType="@e0991ef19484476f906707a71128fcd7">
+					<Attributed AttributedType="@e5f314b42b434d21a74ee0370a0e16cd">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]FriendlyProbability out" />
 						</AttributeValues>
@@ -176,10 +186,10 @@
 				</Parameters>
 			</Function>
 		</p.TypeReference>
-		<p.TypeReference TypeId="ccb02781bcfa43478b20431fb6c9f400">
-			<Function Id="1" IsStatic="True" IsConstructor="False" Name="To string.gvi" ReturnType="Void" DeclaringType="@845b856235ab4a2da5e14975fddf1583" GenericTypeDefinition="Void">
+		<p.TypeReference TypeId="2fc8b24fafc8472d83d2e2c998ce5be8">
+			<Function Id="1" IsStatic="True" IsConstructor="False" Name="To string.gvi" ReturnType="Void" DeclaringType="@3e7b14ce2e134882a4a467643d7eace6" GenericTypeDefinition="Void">
 				<Parameters>
-					<Attributed AttributedType="@4320fcf3cfa74129a3b188d1945c9ea4">
+					<Attributed AttributedType="@f38872450ee14666b175ee881aa6f051">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Friendly Probability" />
 						</AttributeValues>
@@ -192,15 +202,15 @@
 				</Parameters>
 			</Function>
 		</p.TypeReference>
-		<p.TypeReference TypeId="416c4a57a21c4f13a3a6657fcaf1a8ea">
-			<Function Id="1" IsStatic="True" IsConstructor="False" Name="From double core.gvi" ReturnType="Void" DeclaringType="@845b856235ab4a2da5e14975fddf1583" GenericTypeDefinition="Void">
+		<p.TypeReference TypeId="418c479c1e184c92960c87f49157226c">
+			<Function Id="1" IsStatic="True" IsConstructor="False" Name="From double core.gvi" ReturnType="Void" DeclaringType="@3e7b14ce2e134882a4a467643d7eace6" GenericTypeDefinition="Void">
 				<Parameters>
 					<Attributed AttributedType="@ab57c9becab24eb3b81ee5c96eba13b2">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Probability" />
 						</AttributeValues>
 					</Attributed>
-					<Attributed AttributedType="@e0991ef19484476f906707a71128fcd7">
+					<Attributed AttributedType="@e5f314b42b434d21a74ee0370a0e16cd">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Friendly Probability out" />
 						</AttributeValues>
@@ -208,15 +218,15 @@
 				</Parameters>
 			</Function>
 		</p.TypeReference>
-		<p.TypeReference TypeId="19d7e17c8e0f42039773b5d7c5d9fac7">
-			<Function Id="1" IsStatic="True" IsConstructor="False" Name="From double.gvi" ReturnType="Void" DeclaringType="@845b856235ab4a2da5e14975fddf1583" GenericTypeDefinition="Void">
+		<p.TypeReference TypeId="e44b08f6841c44b993da221a17ed9e72">
+			<Function Id="1" IsStatic="True" IsConstructor="False" Name="From double.gvi" ReturnType="Void" DeclaringType="@3e7b14ce2e134882a4a467643d7eace6" GenericTypeDefinition="Void">
 				<Parameters>
 					<Attributed AttributedType="@ab57c9becab24eb3b81ee5c96eba13b2">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Probability" />
 						</AttributeValues>
 					</Attributed>
-					<Attributed AttributedType="@e0991ef19484476f906707a71128fcd7">
+					<Attributed AttributedType="@e5f314b42b434d21a74ee0370a0e16cd">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Friendly Probability out" />
 						</AttributeValues>
@@ -229,10 +239,10 @@
 				</Parameters>
 			</Function>
 		</p.TypeReference>
-		<p.TypeReference TypeId="7df26a2c78904ecb8ab7f4d71fcf3031">
-			<Function Id="1" IsStatic="True" IsConstructor="False" Name="Read Numerator.gvi" InlineIntoCaller="True" ReturnType="Void" DeclaringType="@2e5fee87dfb443cab9599937b24bbfb3" GenericTypeDefinition="Void">
+		<p.TypeReference TypeId="794c93db6b644c4ba4014a7e72d8ec4f">
+			<Function Id="1" IsStatic="True" IsConstructor="False" Name="Read Numerator.gvi" InlineIntoCaller="True" ReturnType="Void" DeclaringType="@3e7b14ce2e134882a4a467643d7eace6" GenericTypeDefinition="Void">
 				<Parameters>
-					<Attributed AttributedType="@f9e81602e1504403965f28b24228c108">
+					<Attributed AttributedType="@f38872450ee14666b175ee881aa6f051">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Friendly probability in" />
 						</AttributeValues>
@@ -242,7 +252,7 @@
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Error in" />
 						</AttributeValues>
 					</Attributed>
-					<Attributed AttributedType="@f279fcfeb7ee4576985018d11d474546">
+					<Attributed AttributedType="@e5f314b42b434d21a74ee0370a0e16cd">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Friendly probability out" />
 						</AttributeValues>
@@ -260,10 +270,10 @@
 				</Parameters>
 			</Function>
 		</p.TypeReference>
-		<p.TypeReference TypeId="e72e614956d44553899201e282d755ad">
-			<Function Id="1" IsStatic="True" IsConstructor="False" Name="Read Denominator.gvi" InlineIntoCaller="True" ReturnType="Void" DeclaringType="@d14bf2775a9241b6b19a55c8ef6d1576" GenericTypeDefinition="Void">
+		<p.TypeReference TypeId="69df9b346c1a4ba192ffa266e109f2c2">
+			<Function Id="1" IsStatic="True" IsConstructor="False" Name="Read Denominator.gvi" InlineIntoCaller="True" ReturnType="Void" DeclaringType="@3e7b14ce2e134882a4a467643d7eace6" GenericTypeDefinition="Void">
 				<Parameters>
-					<Attributed AttributedType="@4f41342348bd47e1bc6705cc6cd2bb43">
+					<Attributed AttributedType="@f38872450ee14666b175ee881aa6f051">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Friendly probability in" />
 						</AttributeValues>
@@ -273,7 +283,7 @@
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Error in" />
 						</AttributeValues>
 					</Attributed>
-					<Attributed AttributedType="@8fed562ed72a46fc83c1c0669da7ae3e">
+					<Attributed AttributedType="@e5f314b42b434d21a74ee0370a0e16cd">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Friendly probability out" />
 						</AttributeValues>
@@ -291,10 +301,10 @@
 				</Parameters>
 			</Function>
 		</p.TypeReference>
-		<p.TypeReference TypeId="7fd66df35c1d44909a28718ea3fad2b8">
-			<Function Id="1" IsStatic="True" IsConstructor="False" Name="Read Friendly String.gvi" InlineIntoCaller="True" ReturnType="Void" DeclaringType="@ed526aee21b34616b0b9d4952ef1dd6a" GenericTypeDefinition="Void">
+		<p.TypeReference TypeId="71db4c55cf0d48b7ab006574636ae196">
+			<Function Id="1" IsStatic="True" IsConstructor="False" Name="Read Friendly String.gvi" InlineIntoCaller="True" ReturnType="Void" DeclaringType="@3e7b14ce2e134882a4a467643d7eace6" GenericTypeDefinition="Void">
 				<Parameters>
-					<Attributed AttributedType="@b679c5f7f0244bea81dc91cc31c9a3be">
+					<Attributed AttributedType="@f38872450ee14666b175ee881aa6f051">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Friendly probability in" />
 						</AttributeValues>
@@ -304,7 +314,7 @@
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Error in" />
 						</AttributeValues>
 					</Attributed>
-					<Attributed AttributedType="@0b20cbab5cfd4a4d8dde3172b32cca9c">
+					<Attributed AttributedType="@e5f314b42b434d21a74ee0370a0e16cd">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Friendly probability out" />
 						</AttributeValues>
@@ -322,10 +332,10 @@
 				</Parameters>
 			</Function>
 		</p.TypeReference>
-		<p.TypeReference TypeId="2c6e5427293f4235a4e9a154cf8c4241">
-			<Function Id="1" IsStatic="True" IsConstructor="False" Name="Read Friendly Description.gvi" InlineIntoCaller="True" ReturnType="Void" DeclaringType="@bc899a7f8c114a41bb74f245860e9d96" GenericTypeDefinition="Void">
+		<p.TypeReference TypeId="d5867342c5a74c68888ef2f7d7bd6924">
+			<Function Id="1" IsStatic="True" IsConstructor="False" Name="Read Friendly Description.gvi" InlineIntoCaller="True" ReturnType="Void" DeclaringType="@3e7b14ce2e134882a4a467643d7eace6" GenericTypeDefinition="Void">
 				<Parameters>
-					<Attributed AttributedType="@9e3261f27f7d4b26aeb3ca27736eb58b">
+					<Attributed AttributedType="@f38872450ee14666b175ee881aa6f051">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Friendly probability in" />
 						</AttributeValues>
@@ -335,7 +345,7 @@
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Error in" />
 						</AttributeValues>
 					</Attributed>
-					<Attributed AttributedType="@ce4649dce86440c481ac8c8b5b58b80f">
+					<Attributed AttributedType="@e5f314b42b434d21a74ee0370a0e16cd">
 						<AttributeValues>
 							<AttributeValue Name="NI.UserDefinedName" Value="[string]Friendly probability out" />
 						</AttributeValues>
@@ -353,8 +363,24 @@
 				</Parameters>
 			</Function>
 		</p.TypeReference>
-		<p.TypeReference TypeId="845b856235ab4a2da5e14975fddf1583">
-			<Attributed AttributedType="@a022e45023d44a2aa28a8b8a6e1f3877">
+		<p.TypeReference TypeId="5bfd4e9767e346808b312abd8fc56190">
+			<Function Id="1" IsStatic="True" IsConstructor="False" Name="Get Friendly Description.gvi" ReturnType="Void" DeclaringType="@3e7b14ce2e134882a4a467643d7eace6" GenericTypeDefinition="Void">
+				<Parameters>
+					<Attributed AttributedType="@ab57c9becab24eb3b81ee5c96eba13b2">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]Numeric" />
+						</AttributeValues>
+					</Attributed>
+					<Attributed AttributedType="@b1a2a3adf2814014a4e367237d2e4a8a">
+						<AttributeValues>
+							<AttributeValue Name="NI.UserDefinedName" Value="[string]friendly description" />
+						</AttributeValues>
+					</Attributed>
+				</Parameters>
+			</Function>
+		</p.TypeReference>
+		<p.TypeReference TypeId="3e7b14ce2e134882a4a467643d7eace6">
+			<Attributed AttributedType="@486027a4f1254e2f8e69402dcb6c62e6">
 				<AttributeValues>
 					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Gregstoll::ProbabilityToFriendlyString" />
 				</AttributeValues>
@@ -369,11 +395,11 @@
 		<p.TypeReference TypeId="76ed87332492482b9de07f1cb1813c35">
 			<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="L2" DataType="String" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="e0991ef19484476f906707a71128fcd7">
-			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R0" DataType="@845b856235ab4a2da5e14975fddf1583" />
+		<p.TypeReference TypeId="e5f314b42b434d21a74ee0370a0e16cd">
+			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R0" DataType="@3e7b14ce2e134882a4a467643d7eace6" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="4320fcf3cfa74129a3b188d1945c9ea4">
-			<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="L0" DataType="@845b856235ab4a2da5e14975fddf1583" />
+		<p.TypeReference TypeId="f38872450ee14666b175ee881aa6f051">
+			<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="L0" DataType="@3e7b14ce2e134882a4a467643d7eace6" />
 		</p.TypeReference>
 		<p.TypeReference TypeId="b1a2a3adf2814014a4e367237d2e4a8a">
 			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R0" DataType="String" />
@@ -384,187 +410,16 @@
 		<p.TypeReference TypeId="9e10974fdf8f462a9ac0a6520bd0931f">
 			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R3" DataType="Error" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="2e5fee87dfb443cab9599937b24bbfb3">
-			<Attributed AttributedType="@3aa1cd2f98bd4780bf6de918dbb590f6">
-				<AttributeValues>
-					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Gregstoll::ProbabilityToFriendlyString" />
-				</AttributeValues>
-			</Attributed>
-		</p.TypeReference>
-		<p.TypeReference TypeId="f9e81602e1504403965f28b24228c108">
-			<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="L0" DataType="@2e5fee87dfb443cab9599937b24bbfb3" />
-		</p.TypeReference>
 		<p.TypeReference TypeId="a005d1bf36a346968c0ed0bcc90e40fb">
 			<Parameter InputParameterPassingRule="Recommended" OutputParameterPassingRule="NotAllowed" Name="L3" DataType="Error" />
-		</p.TypeReference>
-		<p.TypeReference TypeId="f279fcfeb7ee4576985018d11d474546">
-			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R0" DataType="@2e5fee87dfb443cab9599937b24bbfb3" />
 		</p.TypeReference>
 		<p.TypeReference TypeId="9b77f177987747eabfa4fcb25023520c">
 			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R1" DataType="UInt8" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="d14bf2775a9241b6b19a55c8ef6d1576">
-			<Attributed AttributedType="@7ac4bc507cc54d739598651f07aadf14">
-				<AttributeValues>
-					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Gregstoll::ProbabilityToFriendlyString" />
-				</AttributeValues>
-			</Attributed>
-		</p.TypeReference>
-		<p.TypeReference TypeId="4f41342348bd47e1bc6705cc6cd2bb43">
-			<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="L0" DataType="@d14bf2775a9241b6b19a55c8ef6d1576" />
-		</p.TypeReference>
-		<p.TypeReference TypeId="8fed562ed72a46fc83c1c0669da7ae3e">
-			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R0" DataType="@d14bf2775a9241b6b19a55c8ef6d1576" />
-		</p.TypeReference>
-		<p.TypeReference TypeId="ed526aee21b34616b0b9d4952ef1dd6a">
-			<Attributed AttributedType="@4b0f0db713d8403e83c29edda4a28835">
-				<AttributeValues>
-					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Gregstoll::ProbabilityToFriendlyString" />
-				</AttributeValues>
-			</Attributed>
-		</p.TypeReference>
-		<p.TypeReference TypeId="b679c5f7f0244bea81dc91cc31c9a3be">
-			<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="L0" DataType="@ed526aee21b34616b0b9d4952ef1dd6a" />
-		</p.TypeReference>
-		<p.TypeReference TypeId="0b20cbab5cfd4a4d8dde3172b32cca9c">
-			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R0" DataType="@ed526aee21b34616b0b9d4952ef1dd6a" />
-		</p.TypeReference>
 		<p.TypeReference TypeId="27711c5ec61d4cadabbf6184aba55ce5">
 			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R1" DataType="String" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="bc899a7f8c114a41bb74f245860e9d96">
-			<Attributed AttributedType="@d9a379b5c2804f58b574ee05331b38bc">
-				<AttributeValues>
-					<AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]Gregstoll::ProbabilityToFriendlyString" />
-				</AttributeValues>
-			</Attributed>
-		</p.TypeReference>
-		<p.TypeReference TypeId="9e3261f27f7d4b26aeb3ca27736eb58b">
-			<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="L0" DataType="@bc899a7f8c114a41bb74f245860e9d96" />
-		</p.TypeReference>
-		<p.TypeReference TypeId="ce4649dce86440c481ac8c8b5b58b80f">
-			<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Recommended" Name="R0" DataType="@bc899a7f8c114a41bb74f245860e9d96" />
-		</p.TypeReference>
-		<p.TypeReference TypeId="a022e45023d44a2aa28a8b8a6e1f3877">
-			<Composite Id="1" Name="Friendly probability.gtype">
-				<MemberScopes>
-					<Access Scope="Private" />
-					<Access Scope="Private" />
-					<Access Scope="Private" />
-					<Access Scope="Private" />
-					<Access Scope="Public" />
-					<Access Scope="Private" />
-					<Access Scope="Public" />
-					<Access Scope="Public" />
-				</MemberScopes>
-				<GenericTypeDefinition>Void</GenericTypeDefinition>
-				<BaseType>@caca121dbe7d40a5a870fec1a2a87230</BaseType>
-				<Members>
-					<Field FieldAccessPolicy="ReadWrite" Name="Numerator" DataType="UInt8" />
-					<Field FieldAccessPolicy="ReadWrite" Name="Denominator" DataType="UInt8" />
-					<Field FieldAccessPolicy="ReadWrite" Name="Friendly String" DataType="String" />
-					<Field FieldAccessPolicy="ReadWrite" Name="Friendly Description" DataType="String" />
-					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Create.gvi" ReturnType="Void" DeclaringType="@845b856235ab4a2da5e14975fddf1583" GenericTypeDefinition="Void" />
-					<Function Id="3" IsStatic="False" IsConstructor="False" Name="From double core.gvi" ReturnType="Void" DeclaringType="@845b856235ab4a2da5e14975fddf1583" GenericTypeDefinition="Void" />
-					<Function Id="4" IsStatic="False" IsConstructor="False" Name="From double.gvi" ReturnType="Void" DeclaringType="@845b856235ab4a2da5e14975fddf1583" GenericTypeDefinition="Void" />
-					<Function Id="5" IsStatic="False" IsConstructor="False" Name="To string.gvi" ReturnType="Void" DeclaringType="@845b856235ab4a2da5e14975fddf1583" GenericTypeDefinition="Void" />
-				</Members>
-			</Composite>
-		</p.TypeReference>
-		<p.TypeReference TypeId="3aa1cd2f98bd4780bf6de918dbb590f6">
-			<Composite Id="1" Name="Friendly probability.gtype">
-				<MemberScopes>
-					<Access Scope="Private" />
-					<Access Scope="Private" />
-					<Access Scope="Private" />
-					<Access Scope="Private" />
-					<Access Scope="Public" />
-					<Access Scope="Private" />
-					<Access Scope="Public" />
-					<Access Scope="Public" />
-					<Access Scope="Public" />
-				</MemberScopes>
-				<GenericTypeDefinition>Void</GenericTypeDefinition>
-				<BaseType>@caca121dbe7d40a5a870fec1a2a87230</BaseType>
-				<Members>
-					<Field FieldAccessPolicy="ReadWrite" Name="Numerator" DataType="UInt8" />
-					<Field FieldAccessPolicy="ReadWrite" Name="Denominator" DataType="UInt8" />
-					<Field FieldAccessPolicy="ReadWrite" Name="Friendly String" DataType="String" />
-					<Field FieldAccessPolicy="ReadWrite" Name="Friendly Description" DataType="String" />
-					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Create.gvi" ReturnType="Void" DeclaringType="@2e5fee87dfb443cab9599937b24bbfb3" GenericTypeDefinition="Void" />
-					<Function Id="3" IsStatic="False" IsConstructor="False" Name="From double core.gvi" ReturnType="Void" DeclaringType="@2e5fee87dfb443cab9599937b24bbfb3" GenericTypeDefinition="Void" />
-					<Function Id="4" IsStatic="False" IsConstructor="False" Name="From double.gvi" ReturnType="Void" DeclaringType="@2e5fee87dfb443cab9599937b24bbfb3" GenericTypeDefinition="Void" />
-					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Read Numerator.gvi" ReturnType="Void" DeclaringType="@2e5fee87dfb443cab9599937b24bbfb3" GenericTypeDefinition="Void" />
-					<Function Id="6" IsStatic="False" IsConstructor="False" Name="To string.gvi" ReturnType="Void" DeclaringType="@2e5fee87dfb443cab9599937b24bbfb3" GenericTypeDefinition="Void" />
-				</Members>
-			</Composite>
-		</p.TypeReference>
-		<p.TypeReference TypeId="7ac4bc507cc54d739598651f07aadf14">
-			<Composite Id="1" Name="Friendly probability.gtype">
-				<MemberScopes>
-					<Access Scope="Private" />
-					<Access Scope="Private" />
-					<Access Scope="Private" />
-					<Access Scope="Private" />
-					<Access Scope="Public" />
-					<Access Scope="Private" />
-					<Access Scope="Public" />
-					<Access Scope="Public" />
-					<Access Scope="Public" />
-					<Access Scope="Public" />
-				</MemberScopes>
-				<GenericTypeDefinition>Void</GenericTypeDefinition>
-				<BaseType>@caca121dbe7d40a5a870fec1a2a87230</BaseType>
-				<Members>
-					<Field FieldAccessPolicy="ReadWrite" Name="Numerator" DataType="UInt8" />
-					<Field FieldAccessPolicy="ReadWrite" Name="Denominator" DataType="UInt8" />
-					<Field FieldAccessPolicy="ReadWrite" Name="Friendly String" DataType="String" />
-					<Field FieldAccessPolicy="ReadWrite" Name="Friendly Description" DataType="String" />
-					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Create.gvi" ReturnType="Void" DeclaringType="@d14bf2775a9241b6b19a55c8ef6d1576" GenericTypeDefinition="Void" />
-					<Function Id="3" IsStatic="False" IsConstructor="False" Name="From double core.gvi" ReturnType="Void" DeclaringType="@d14bf2775a9241b6b19a55c8ef6d1576" GenericTypeDefinition="Void" />
-					<Function Id="4" IsStatic="False" IsConstructor="False" Name="From double.gvi" ReturnType="Void" DeclaringType="@d14bf2775a9241b6b19a55c8ef6d1576" GenericTypeDefinition="Void" />
-					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Read Denominator.gvi" ReturnType="Void" DeclaringType="@d14bf2775a9241b6b19a55c8ef6d1576" GenericTypeDefinition="Void" />
-					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Read Numerator.gvi" ReturnType="Void" DeclaringType="@d14bf2775a9241b6b19a55c8ef6d1576" GenericTypeDefinition="Void" />
-					<Function Id="7" IsStatic="False" IsConstructor="False" Name="To string.gvi" ReturnType="Void" DeclaringType="@d14bf2775a9241b6b19a55c8ef6d1576" GenericTypeDefinition="Void" />
-					<Property Name="Numerator" Getter="Read Numerator.gvi" DataType="UInt8" />
-				</Members>
-			</Composite>
-		</p.TypeReference>
-		<p.TypeReference TypeId="4b0f0db713d8403e83c29edda4a28835">
-			<Composite Id="1" Name="Friendly probability.gtype">
-				<MemberScopes>
-					<Access Scope="Private" />
-					<Access Scope="Private" />
-					<Access Scope="Private" />
-					<Access Scope="Private" />
-					<Access Scope="Public" />
-					<Access Scope="Private" />
-					<Access Scope="Public" />
-					<Access Scope="Public" />
-					<Access Scope="Public" />
-					<Access Scope="Public" />
-					<Access Scope="Public" />
-				</MemberScopes>
-				<GenericTypeDefinition>Void</GenericTypeDefinition>
-				<BaseType>@caca121dbe7d40a5a870fec1a2a87230</BaseType>
-				<Members>
-					<Field FieldAccessPolicy="ReadWrite" Name="Numerator" DataType="UInt8" />
-					<Field FieldAccessPolicy="ReadWrite" Name="Denominator" DataType="UInt8" />
-					<Field FieldAccessPolicy="ReadWrite" Name="Friendly String" DataType="String" />
-					<Field FieldAccessPolicy="ReadWrite" Name="Friendly Description" DataType="String" />
-					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Create.gvi" ReturnType="Void" DeclaringType="@ed526aee21b34616b0b9d4952ef1dd6a" GenericTypeDefinition="Void" />
-					<Function Id="3" IsStatic="False" IsConstructor="False" Name="From double core.gvi" ReturnType="Void" DeclaringType="@ed526aee21b34616b0b9d4952ef1dd6a" GenericTypeDefinition="Void" />
-					<Function Id="4" IsStatic="False" IsConstructor="False" Name="From double.gvi" ReturnType="Void" DeclaringType="@ed526aee21b34616b0b9d4952ef1dd6a" GenericTypeDefinition="Void" />
-					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Read Denominator.gvi" ReturnType="Void" DeclaringType="@ed526aee21b34616b0b9d4952ef1dd6a" GenericTypeDefinition="Void" />
-					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Read Friendly String.gvi" ReturnType="Void" DeclaringType="@ed526aee21b34616b0b9d4952ef1dd6a" GenericTypeDefinition="Void" />
-					<Function Id="7" IsStatic="False" IsConstructor="False" Name="Read Numerator.gvi" ReturnType="Void" DeclaringType="@ed526aee21b34616b0b9d4952ef1dd6a" GenericTypeDefinition="Void" />
-					<Function Id="8" IsStatic="False" IsConstructor="False" Name="To string.gvi" ReturnType="Void" DeclaringType="@ed526aee21b34616b0b9d4952ef1dd6a" GenericTypeDefinition="Void" />
-					<Property Name="Numerator" Getter="Read Numerator.gvi" DataType="UInt8" />
-					<Property Name="Denominator" Getter="Read Denominator.gvi" DataType="UInt8" />
-				</Members>
-			</Composite>
-		</p.TypeReference>
-		<p.TypeReference TypeId="d9a379b5c2804f58b574ee05331b38bc">
+		<p.TypeReference TypeId="486027a4f1254e2f8e69402dcb6c62e6">
 			<Composite Id="1" Name="Friendly probability.gtype">
 				<MemberScopes>
 					<Access Scope="Private" />
@@ -587,17 +442,18 @@
 					<Field FieldAccessPolicy="ReadWrite" Name="Denominator" DataType="UInt8" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Friendly String" DataType="String" />
 					<Field FieldAccessPolicy="ReadWrite" Name="Friendly Description" DataType="String" />
-					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Create.gvi" ReturnType="Void" DeclaringType="@bc899a7f8c114a41bb74f245860e9d96" GenericTypeDefinition="Void" />
-					<Function Id="3" IsStatic="False" IsConstructor="False" Name="From double core.gvi" ReturnType="Void" DeclaringType="@bc899a7f8c114a41bb74f245860e9d96" GenericTypeDefinition="Void" />
-					<Function Id="4" IsStatic="False" IsConstructor="False" Name="From double.gvi" ReturnType="Void" DeclaringType="@bc899a7f8c114a41bb74f245860e9d96" GenericTypeDefinition="Void" />
-					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Read Denominator.gvi" ReturnType="Void" DeclaringType="@bc899a7f8c114a41bb74f245860e9d96" GenericTypeDefinition="Void" />
-					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Read Friendly Description.gvi" ReturnType="Void" DeclaringType="@bc899a7f8c114a41bb74f245860e9d96" GenericTypeDefinition="Void" />
-					<Function Id="7" IsStatic="False" IsConstructor="False" Name="Read Friendly String.gvi" ReturnType="Void" DeclaringType="@bc899a7f8c114a41bb74f245860e9d96" GenericTypeDefinition="Void" />
-					<Function Id="8" IsStatic="False" IsConstructor="False" Name="Read Numerator.gvi" ReturnType="Void" DeclaringType="@bc899a7f8c114a41bb74f245860e9d96" GenericTypeDefinition="Void" />
-					<Function Id="9" IsStatic="False" IsConstructor="False" Name="To string.gvi" ReturnType="Void" DeclaringType="@bc899a7f8c114a41bb74f245860e9d96" GenericTypeDefinition="Void" />
+					<Function Id="2" IsStatic="False" IsConstructor="False" Name="Create.gvi" ReturnType="Void" DeclaringType="@3e7b14ce2e134882a4a467643d7eace6" GenericTypeDefinition="Void" />
+					<Function Id="3" IsStatic="False" IsConstructor="False" Name="From double core.gvi" ReturnType="Void" DeclaringType="@3e7b14ce2e134882a4a467643d7eace6" GenericTypeDefinition="Void" />
+					<Function Id="4" IsStatic="False" IsConstructor="False" Name="From double.gvi" ReturnType="Void" DeclaringType="@3e7b14ce2e134882a4a467643d7eace6" GenericTypeDefinition="Void" />
+					<Function Id="5" IsStatic="False" IsConstructor="False" Name="Read Denominator.gvi" ReturnType="Void" DeclaringType="@3e7b14ce2e134882a4a467643d7eace6" GenericTypeDefinition="Void" />
+					<Function Id="6" IsStatic="False" IsConstructor="False" Name="Read Friendly Description.gvi" ReturnType="Void" DeclaringType="@3e7b14ce2e134882a4a467643d7eace6" GenericTypeDefinition="Void" />
+					<Function Id="7" IsStatic="False" IsConstructor="False" Name="Read Friendly String.gvi" ReturnType="Void" DeclaringType="@3e7b14ce2e134882a4a467643d7eace6" GenericTypeDefinition="Void" />
+					<Function Id="8" IsStatic="False" IsConstructor="False" Name="Read Numerator.gvi" ReturnType="Void" DeclaringType="@3e7b14ce2e134882a4a467643d7eace6" GenericTypeDefinition="Void" />
+					<Function Id="9" IsStatic="False" IsConstructor="False" Name="To string.gvi" ReturnType="Void" DeclaringType="@3e7b14ce2e134882a4a467643d7eace6" GenericTypeDefinition="Void" />
 					<Property Name="Numerator" Getter="Read Numerator.gvi" DataType="UInt8" />
 					<Property Name="Denominator" Getter="Read Denominator.gvi" DataType="UInt8" />
 					<Property Name="Friendly String" Getter="Read Friendly String.gvi" DataType="String" />
+					<Property Name="Friendly Description" Getter="Read Friendly Description.gvi" DataType="String" />
 				</Members>
 			</Composite>
 		</p.TypeReference>
@@ -746,6 +602,25 @@
 								<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
 								<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Read Friendly Description" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
 									<FontSetting FontFamily="Verdana" FontSize="6" />
+								</FileNameText>
+							</IconTemplate>
+							<IconTemplate Height="[float]40" IsHitTestVisible="[bool]False" Left="[float]0" TemplateName="[string][Comp]Gregstoll.ProbabilityToFriendlyString.gcomp" Top="[float]0" Width="[float]40" />
+							<IconTemplate Height="[float]40" IsHitTestVisible="[bool]False" Left="[float]0" TemplateName="[string][Class]Friendly probability.gtype" Top="[float]0" Width="[float]40" />
+						</IconPanel>
+					</Icon>
+				</MergeItem>
+			</MergeScript>
+		</p.IconModel>
+		<p.IconModel Target="Gregstoll::ProbabilityToFriendlyString::Friendly probability.gtype::Get Friendly Description.gvi">
+			<MergeScript>
+				<MergeItem Path="." IsPrimary="True">
+					<Icon ListViewIconCrop="0 0 40 40">
+						<IconPanel Height="[float]40" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+							<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Height="[float]40" Left="[float]0" TemplateName="[string]Gray" Top="[float]0" Width="[float]40">
+								<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+								<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+								<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Get Friendly Description" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+									<FontSetting FontFamily="Segoe UI" FontSize="6" />
 								</FileNameText>
 							</IconTemplate>
 							<IconTemplate Height="[float]40" IsHitTestVisible="[bool]False" Left="[float]0" TemplateName="[string][Comp]Gregstoll.ProbabilityToFriendlyString.gcomp" Top="[float]0" Width="[float]40" />
