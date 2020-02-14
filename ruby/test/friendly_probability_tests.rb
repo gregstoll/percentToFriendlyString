@@ -31,4 +31,24 @@ class FriendlyProbabilityTests < Test::Unit::TestCase
             assert_equal expected.friendlyString, actual.friendlyString, "Denominator, called on #{parts[0]} (line #{lineNumber})"
         end
     end
+    def test_all_cases_friendly_probability
+        directory = File.absolute_path(File.dirname(__FILE__))
+        path = File.join(directory, 'testCases.friendlyDescription.txt')
+        while !File.exists?(path)
+            directory = File.dirname(directory)
+            path = File.join(directory, 'testCases.friendlyDescription.txt')
+        end
+        lineNumber = 0
+        File.open(path).each do |fullLine|
+            lineNumber += 1
+            line = fullLine.strip
+            if (line.start_with?('#') or line.empty?)
+                next
+            end
+            parts = line.split(',')
+            expected = parts[1]
+            actual = ProbabilityToFriendlyString::FriendlyProbability.fromProbability(parts[0].to_f)
+            assert_equal expected, actual.friendlyDescription, "FriendlyDescription, called on #{parts[0]} (line #{lineNumber})"
+        end
+    end
 end
