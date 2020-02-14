@@ -18,8 +18,8 @@
             <tbody>
                 <tr><td>72.3%</td><td style="padding-left: 15px; padding-right: 15px;">=&gt;</td><td style="font-weight: bold;" id="demo723"></td></tr>
                 <tr><td>97.2%</td><td style="padding-left: 15px; padding-right: 15px;">=&gt;</td><td style="font-weight: bold;" id="demo972"></td></tr>
-                <tr><td colspan="3">Try it below!</td></tr>
-                <tr><td><input type="number" style="width: 4em;" value="42.7" min="0" max="100" step="1.0" id="demoInput">%</td><td style="padding-left: 15px; padding-right: 15px;">=&gt;</td><td style="font-weight: bold;" id="demoOutput"></td></tr>
+		<tr><td colspan="3">Try it below!</td></tr>
+                <tr><td><input type="number" style="width: 4em;" value="42.7" min="0" max="100" step="1.0" id="demoInput">%</td><td style="padding-left: 15px; padding-right: 15px;">=&gt;</td><td><span style="font-weight: bold;" id="demoOutputFraction"></span>, or <span style="font-weight: bold;" id="demoOutputDescription"></span></td></tr>
             </tbody>
         </table>
         <h2>Languages</h2>
@@ -42,11 +42,14 @@
         }
         function updateDemoOutput(rawInput) {
             let input = rawInput.trim();
-            let target = document.getElementById('demoOutput');
+            let targetFraction = document.getElementById('demoOutputFraction');
+            let targetDescription = document.getElementById('demoOutputDescription');
             try
             {
                 let f = parseFloat(input) / 100;
-                target.innerText = FriendlyProbability.fromProbability(f).friendlyString;
+                let friendlyProbability = FriendlyProbability.fromProbability(f);
+                targetFraction.innerText = friendlyProbability.friendlyString;
+                targetDescription.innerText = friendlyProbability.friendlyDescription;
             }
             catch (error) {
                 target.innerText = "Error: " + error;
