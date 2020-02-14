@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="5679C14A936DE73FECBFC413458D9E5366E41EDA664E2F1E3B37528B2BAC8F3263FCE54C5381B28B82391439BA66AA220E374F87F83E8E7C715DEC5D9B222A99" Timestamp="1D5E37A11786EA1" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="7.1.0.50148" FeatureSetName="LabVIEW Controls" Name="http://www.ni.com/Controls.LabVIEW.Design" OldestCompatibleVersion="7.1.0.49152" Version="7.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="7.1.0.50148" FeatureSetName="Common language components" Name="http://www.ni.com/MocCommon" OldestCompatibleVersion="7.1.0.49153" Version="7.1.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="7.1.0.50148" FeatureSetName="Editor" Name="http://www.ni.com/PanelCommon" OldestCompatibleVersion="6.1.0.0" Version="6.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="7.1.0.50148" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="7.1.0.49153" Version="7.1.0.49153" />
+		<ApplicationVersionInfo Build="7.1.0.50148" Name="LabVIEW NXG" Version="4.0.0" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@6a4cb30d405542eab8c22ed4a879e307" Id="7b979d3a8e1344cfb1b14b532cb69c6b" xmlns="http://www.ni.com/MocCommon">
+		<Icon Id="9042da4a6a714fc3ab389f55e866d38c" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="af7d5d5ff8bf400895772698d2aac90c" Left="[float]0" PanelSizeMode="Resize" Top="[float]0" Width="[float]40">
+				<IconTemplate Height="[float]40" Id="145f6f25b4e467fbcbf9c17118222fd" Left="[float]0" TemplateName="[string]Blank" Top="[float]0" Width="[float]40" />
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@6a4cb30d405542eab8c22ed4a879e307" Id="e114d44183784e09ab24564cabf73172" Name="Test case friendly description">
+			<p.DefaultValue>
+				<Cluster>
+					<Field1>0x0</Field1>
+					<Field2>0</Field2>
+					<Field3>""</Field3>
+				</Cluster>
+			</p.DefaultValue>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="626fbc0f15164eb29f90daca54005b40" xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="7e709824ec0f48fb804f91280d27143f" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Id="5cf38567481742d2a98e5dee21dd0cc7" Name="Test case friendly description.gtype" NameTracksFileName="True">
+			<EmbeddedDefinitionReference Bindings="{http://www.ni.com/PlatformFramework}NeverLazy" Id="32a43e610d06467daf86421d1f227c61" ModelDefinitionType="NationalInstruments.PanelCommon.SourceModel.ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Control" Id="d5e6059cf86c4e8297ceca5db31d9e57" xmlns="http://www.ni.com/MocCommon">
+					<Cluster AutoArrange="[AutoArrange]SizeToFit" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@6a4cb30d405542eab8c22ed4a879e307" Height="[float]179" Id="7aa652ad968a44caa89fa1bb5f202672" Label="[UIModel]a065b89f2645416f8adbcfc3fae73a98" Left="[float]436" TabIndex="[int]0" Top="[float]70" Value="{DataItemBinding Id=e114d44183784e09ab24564cabf73172}" Width="[float]170" xmlns="http://www.ni.com/PanelCommon">
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="c7378a4ddf444cb3884913ea0cddf8de" Label="[UIModel]29812e30dcc41c5bbab34c78c365225" Left="[float]4" TabIndex="[int]0" Top="[float]25" Value="{ClusterBinding FieldName=Probability}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="29812e30dcc41c5bbab34c78c365225" LabelOwner="[UIModel]c7378a4ddf444cb3884913ea0cddf8de" Left="[float]4" Text="[string]Probability" Top="[float]5" Width="[float]57" />
+						<NumericText BaseName="[string]Numeric" Height="[float]24" Id="b7b713e2b82442769489d926445b85ac" Interval="[uint]1" Label="[UIModel]cb3b28f3d7864786ba9d24fc1ced774f" Left="[float]4" TabIndex="[int]1" Top="[float]143" Value="{ClusterBinding FieldName=Line\ number}" ValueFormatter="[string]LV:0" ValueType="[Type]UInt32" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="cb3b28f3d7864786ba9d24fc1ced774f" LabelOwner="[UIModel]b7b713e2b82442769489d926445b85ac" Left="[float]4" Text="[string]Line number" Top="[float]123" Width="[float]66" />
+						<StringControl AcceptsReturn="[bool]True" BaseName="[string]String" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="bfc55acbe6a242458bec53f4a1368d91" Label="[UIModel]2333c7b89b6b4d9a92a31e56b6c93aba" Left="[float]4" TabIndex="[int]2" Text="{ClusterBinding FieldName=Expected\ friendly\ description}" Top="[float]84" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]72" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Height="[float]16" Id="2333c7b89b6b4d9a92a31e56b6c93aba" LabelOwner="[UIModel]bfc55acbe6a242458bec53f4a1368d91" Left="[float]4" Text="[string]Expected friendly description" Top="[float]64" Width="[float]154" />
+					</Cluster>
+					<Label Height="[float]16" Id="a065b89f2645416f8adbcfc3fae73a98" LabelOwner="[UIModel]7aa652ad968a44caa89fa1bb5f202672" Left="[float]436" Text="[string]Test case friendly description" Top="[float]50" Width="[float]153" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="6a4cb30d405542eab8c22ed4a879e307">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="Probability" DataType="Double" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Line number" DataType="UInt32" />
+					<Field FieldAccessPolicy="ReadWrite" Name="Expected friendly description" DataType="String" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>
