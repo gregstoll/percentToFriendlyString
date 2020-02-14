@@ -1,4 +1,4 @@
-Built against JDK 8
+Built against JDK 11
 
 Usage:
 
@@ -6,6 +6,7 @@ Usage:
 
 `friendly` is a class of type `FriendlyProbability` with getters
 - `getFriendlyString()`: a string representing the probability (in this case "5 in 7")
+- `getFriendlyDescription()`: a string representing a qualitative description of the probability (in this case "Good chance")
 - `getNumerator()`: the numerator of the probability (in this case 5)
 - `getDenominator()`: the denominator of the probability (in this case 7)
 
