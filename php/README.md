@@ -6,6 +6,7 @@ Usage:
     
 `$friendly` is an object of type `FriendlyProbabilty` that has properties
 - `friendly_string`: a string representing the probability (in this case "5 in 7")
+- `friendly_description`: a string representing a qualitative description of the probability (in this case "Good chance")
 - `numerator`: the numerator of the probability (in this case 5)
 - `denominator`: the denominator of the probability (in this case 7)
 
