@@ -9,6 +9,7 @@ use probability_to_friendly_string::FriendlyProbability;
 let friendly = FriendlyProbability::from_probability(0.723);
 assert_eq!(5, friendly.numerator());
 assert_eq!(7, friendly.denominator());
+assert_eq!("Good chance", friendly.friendly_description());
 assert_eq!("5 in 7", friendly.friendly_string());
 
 let friendly = FriendlyProbability::from_probability(0.999);
