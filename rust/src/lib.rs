@@ -9,6 +9,7 @@ extern crate lazy_static;
 pub struct FriendlyProbability {
     numerator: u8,
     denominator: u8,
+    friendly_description: String,
     friendly_string: String
 }
 
@@ -20,11 +21,12 @@ impl fmt::Display for FriendlyProbability {
 impl FriendlyProbability {
     // http://xion.io/post/code/rust-optional-args.html
     /// Create a new FriendlyProbability.  Most of the time you will want to use `from_probability()` instead.
-    pub fn new<T: Into<Option<String>>>(numerator: u8, denominator: u8, friendly_string: T) -> FriendlyProbability {
+    pub fn new<T: Into<Option<String>>>(numerator: u8, denominator: u8, friendly_description: String, friendly_string: T) -> FriendlyProbability {
         let real_friendly_string = friendly_string.into().unwrap_or_else(|| format!("{} in {}", numerator, denominator));
         FriendlyProbability {
             numerator,
             denominator,
+            friendly_description,
             friendly_string: real_friendly_string
         }
     }
@@ -35,6 +37,11 @@ impl FriendlyProbability {
     /// Gets the denominator of the FriendlyProbability.
     pub fn denominator(self: &FriendlyProbability) -> u8 {
         self.denominator
+    }
+    /// Gets the friendly description of the FriendlyProbability.
+    /// This is a qualitative description of the probability ("Still possible", "Flip a coin", "Good chance", etc.)
+    pub fn friendly_description(self: &FriendlyProbability) -> &str {
+        &self.friendly_description
     }
     /// Gets the friendly string of the FriendlyProbability.
     /// Usually this is the same as "{numerator} in {denominator}",
@@ -52,6 +59,7 @@ impl FriendlyProbability {
     /// let friendly = FriendlyProbability::from_probability(0.723);
     /// assert_eq!(5, friendly.numerator());
     /// assert_eq!(7, friendly.denominator());
+    /// assert_eq!("Good chance", friendly.friendly_description());
     /// assert_eq!("5 in 7", friendly.friendly_string());
     /// 
     /// let friendly = FriendlyProbability::from_probability(0.999);
@@ -66,17 +74,27 @@ impl FriendlyProbability {
         if probability < 0.0 || probability > 1.0 {
             panic!("probability is less than 0 or greater than 1!")
         }
+        // use slice::binary_search_by
+        // because f32's are not orderable
+        // https://stackoverflow.com/questions/28247990/how-to-do-a-binary-search-on-a-vec-of-floats
+        let friendly_description_location = FRIENDLY_DESCRIPTION_VALUES.binary_search_by(|f| {
+            f.partial_cmp(&probability).expect("Couldn't compare floats?")
+        });
+        let friendly_description = String::from(match friendly_description_location {
+            Ok(i) => FRIENDLY_DESCRIPTION_STRINGS[i],
+            Err(i) => FRIENDLY_DESCRIPTION_STRINGS[i - 1]
+        });
         if probability == 0.0 {
-            return FriendlyProbability::new(0, 1, None)
+            return FriendlyProbability::new(0, 1, friendly_description, None)
         }
         if probability == 1.0 {
-            return FriendlyProbability::new(1, 1, None)
+            return FriendlyProbability::new(1, 1, friendly_description, None)
         }
         if probability > 0.99 {
-            return FriendlyProbability::new(99, 100, String::from(">99 in 100"))
+            return FriendlyProbability::new(99, 100, friendly_description, String::from(">99 in 100"))
         }
         if probability < 0.01 {
-            return FriendlyProbability::new(1, 100, String::from("<1 in 100"))
+            return FriendlyProbability::new(1, 100, friendly_description, String::from("<1 in 100"))
         }
         let data = &FRACTION_DATA;
         let fraction_to_compare = Fraction::new_for_comparison(probability);
@@ -86,25 +104,25 @@ impl FriendlyProbability {
         let location = data.binary_search_by(|f| {
             f.partial_cmp(&fraction_to_compare).expect("Couldn't compare values?")
         });
-        fn friendly_probability_from_fraction(fraction: &Fraction) -> FriendlyProbability {
-            FriendlyProbability::new(fraction.numerator, fraction.denominator, None)
+        fn friendly_probability_from_fraction(fraction: &Fraction, friendly_description: String) -> FriendlyProbability {
+            FriendlyProbability::new(fraction.numerator, fraction.denominator, friendly_description, None)
         }
         let data_len = data.len();
         match location {
-            Ok(i) => friendly_probability_from_fraction(&data[i]),
+            Ok(i) => friendly_probability_from_fraction(&data[i], friendly_description),
             Err(i) => {
                 // This means it could be inserted at index i
                 if i == 0 {
-                    return friendly_probability_from_fraction(&data[0]);
+                    return friendly_probability_from_fraction(&data[0], friendly_description);
                 }
                 if i == data_len {
-                    return friendly_probability_from_fraction(&data[data_len - 1]);
+                    return friendly_probability_from_fraction(&data[data_len - 1], friendly_description);
                 }
                 if probability - (&data[i - 1]).value < (&data[i]).value - probability {
-                    return friendly_probability_from_fraction(&data[i - 1]);
+                    return friendly_probability_from_fraction(&data[i - 1], friendly_description);
                 }
                 else {
-                    return friendly_probability_from_fraction(&data[i]);
+                    return friendly_probability_from_fraction(&data[i], friendly_description);
                 }
             }
         }
@@ -161,6 +179,23 @@ lazy_static! {
         fractions.sort_unstable_by(|a,b| a.partial_cmp(b).unwrap());
         fractions
     };
+    static ref FRIENDLY_DESCRIPTION_VALUES: [f32; 14] = [0.0, 0.005, 0.02, 0.08, 0.15, 0.2, 0.45, 0.55, 0.7, 0.8, 0.85, 0.9, 0.95, 0.995];
+    static ref FRIENDLY_DESCRIPTION_STRINGS: [&'static str; 14] = [
+		"Hard to imagine",
+		"Barely possible",
+		"Still possible",
+		"Some chance",
+		"Could happen",
+		"Perhaps",
+		"Flip a coin",
+		"Likelier than not",
+		"Good chance",
+		"Probably",
+		"Quite likely",
+		"Pretty likely",
+		"Very likely",
+		"Almost certainly"
+    ];
 }
 
 #[cfg(test)]
@@ -169,13 +204,13 @@ mod tests {
 
     #[test]
     fn friendly_probability_string_matches_numeric_inputs() {
-        let fp = FriendlyProbability::new(1, 2, None);
+        let fp = FriendlyProbability::new(1, 2, "".to_string(), None);
         assert_eq!("1 in 2", fp.friendly_string);
     }
     #[test]
     fn friendly_probability_string_matches_string_input() {
         let s = String::from("something weird");
-        let fp = FriendlyProbability::new(1, 2, s.clone());
+        let fp = FriendlyProbability::new(1, 2, "".to_string(), s.clone());
         assert_eq!(s, fp.friendly_string);
     }
     #[test]
