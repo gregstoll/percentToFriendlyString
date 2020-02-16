@@ -35,7 +35,9 @@ final class FriendlyProbabilityTest extends TestCase {
             $this->assertTrue(false, "Line badly formatted: " . $line . " (line " . $line_number . ")");
         }
         $actual = FriendlyProbability::fromProbability(floatval($parts[0]));
-        $this->assertEquals($expected, $actual, "line " . $line_number . " with value " . $line);
+        $this->assertEquals($expected->numerator, $actual->numerator, "numerator line " . $line_number . " with value " . $line);
+        $this->assertEquals($expected->denominator, $actual->denominator, "denominator line " . $line_number . " with value " . $line);
+        $this->assertEquals($expected->friendly_string, $actual->friendly_string, "friendly_string line " . $line_number . " with value " . $line);
 
     }
 

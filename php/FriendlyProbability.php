@@ -23,6 +23,24 @@ final class FriendlyProbability {
     }
 
     private static $fractions_data = [];
+	private static $friendly_description_values = [0, 0.005, 0.02, 0.08, 0.15, 0.2, 0.45, 0.55, 0.7, 0.8, 0.85, 0.9, 0.95, 0.995];
+	private static $friendly_description_strings = [
+		"Hard to imagine",
+		"Barely possible",
+		"Still possible",
+		"Some chance",
+		"Could happen",
+		"Perhaps",
+		"Flip a coin",
+		"Likelier than not",
+		"Good chance",
+		"Probably",
+		"Quite likely",
+		"Pretty likely",
+		"Very likely",
+		"Almost certainly",
+		];
+
     private static function get_fractions_data() {
         if (count(FriendlyProbability::$fractions_data) == 0)
         {
@@ -51,7 +69,16 @@ final class FriendlyProbability {
         if ($f < 0 || $f > 1) {
             throw new DomainException("Probability is less than 0 or greater than 1");
         }
-        $friendly_description = "";
+        $friendly_description_index = FriendlyProbability::binary_search(FriendlyProbability::$friendly_description_values, $f, function($a, $b) { return $a <=> $b; });
+        // >= 0 means exact match, so index is correct
+        if ($friendly_description_index < 0) {
+            // Per the documentation, if it's not found the return value is (-insert_index - 1)
+            // where insert_index is the index of smallest element that is greater than $key or sizeof($a) if $key
+            // is larger than all elements in the array.
+            // Here we want insert_index, so transform $index into that.
+            $friendly_description_index = -1 * $friendly_description_index - 2;
+        }
+        $friendly_description = FriendlyProbability::$friendly_description_strings[$friendly_description_index];
         if ($f == 0) {
             return new FriendlyProbability(0, 1, $friendly_description);
         }
