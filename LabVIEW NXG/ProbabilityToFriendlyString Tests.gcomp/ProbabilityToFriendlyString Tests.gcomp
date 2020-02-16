@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="1D08D33C38145FD02F366C3283C41C8FEE9702D85D7FFBC418F957C2D0752C44BD1F0AFE6FF32B45BB40497241693B8429835058B311230DE2E0733E85D9B664" Timestamp="1D4D554E8F81325" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="777E2FE697362E47F02187129597D23EB3BBB6796594AC0EB693B6E98AF5095E50A96B457B210D07D4952A635DAA087ACA28272BC084AF20153C792FFAA4DF32" Timestamp="1D5E37B8F5B4855" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
-		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="GComponentFeatureSet" Name="http://www.ni.com/GComponent.xsd" OldestCompatibleVersion="6.1.0.1" Version="6.2.0.49152" />
-		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="6.2.0.49154" Version="6.2.0.49154" />
-		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="SystemDesigner" Name="http://www.ni.com/SystemDesigner/EnvoyManagement" OldestCompatibleVersion="5.0.0.0" Version="5.0.0.49152" />
-		<ApplicationVersionInfo Build="6.4.0.49213" Name="LabVIEW NXG" Version="3.1.0" />
+		<ParsableNamespace AssemblyFileVersion="7.1.0.50148" FeatureSetName="GComponentFeatureSet" Name="http://www.ni.com/GComponent.xsd" OldestCompatibleVersion="7.1.0.49152" Version="7.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="7.1.0.50148" FeatureSetName="Native target compiler" Name="http://www.ni.com/LabVIEW.NativeBackEndCompiler" OldestCompatibleVersion="4.5.0.0" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="7.1.0.50148" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="7.1.0.49153" Version="7.1.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="7.1.0.50148" FeatureSetName="SystemDesigner" Name="http://www.ni.com/SystemDesigner/EnvoyManagement" OldestCompatibleVersion="5.0.0.0" Version="5.0.0.49152" />
+		<ApplicationVersionInfo Build="7.1.0.50148" Name="LabVIEW NXG" Version="4.0.0" />
 	</SourceModelFeatureSet>
 	<ComponentDefinition DefaultConfigurationName="Configuration1" Id="4a744ecb73c74faa87ca433e29e0b7e1" RootNamespaceId="839596ed8c64442db8a75ab72d342a3e" xmlns="http://www.ni.com/GComponent.xsd">
 		<Icon Id="7824207d684849c1a95cfa6760099895" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
@@ -15,12 +16,12 @@
 		<CompilerSymbolTable Id="3b9334699fee4f3eafbbac1c62fcddf6" xmlns="http://www.ni.com/PlatformFramework" />
 		<ComponentConfiguration ComponentSubtypeIdentifier="Application" Id="50369d0b5f714a33ac613119a7e10cf0" Name="Configuration1">
 			<CompilerSymbolTable Id="9f522f81101b40ed81063e56cce351be" xmlns="http://www.ni.com/PlatformFramework" />
-			<NativeApplicationOutputTypeProperties Id="89ae4bbb4b804dd6b88896290955e98b" />
+			<NativeApplicationOutputTypeProperties Id="89ae4bbb4b804dd6b88896290955e98b" xmlns="http://www.ni.com/LabVIEW.NativeBackEndCompiler" />
 			<ComponentItemProperties AssociatedEnvoyId="42ea36fd8a94721b735c16065cdcaa4" Id="ad023faf11b84e08a3aee1b867ff81fb" TopLevel="True" />
 		</ComponentConfiguration>
 	</ComponentDefinition>
 	<EnvoyManagerFile Id="9123e0325be64da397bd69d26c9013bf" xmlns="http://www.ni.com/PlatformFramework">
-		<ProjectSettings Id="a839a2c599234d3b8e6f091dbf6385a6" ModelDefinitionType="ProjectSettings" Name="ZProjectSettings" />
+		<EnvoyManagerRootEnvoy Id="a839a2c599234d3b8e6f091dbf6385a6" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
 		<EmbeddedDefinitionReference Id="5a3253889d1b4903b1a602e10634be17" ModelDefinitionType="{http://www.ni.com/GComponent.xsd}ComponentDefinitionEnvoyHierarchyRoot" Name="Global namespace">
 			<ComponentDefinitionEnvoyHierarchyRoot xmlns="http://www.ni.com/GComponent.xsd" />
 			<NameScopingEnvoy AutomaticallyResolveUp="True" Id="ce17826a96fa4ce2a145e1971f9f1ddd" Name="Gregstoll">
@@ -29,6 +30,9 @@
 					<SourceFileReference Bindings="ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory" Id="42ea36fd8a94721b735c16065cdcaa4" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Run tests.gvi" StoragePath="Run tests.gvi" />
 					<SourceFileReference Bindings="EnvoyManager" Id="796cf8ae195d41a0bbdc5db109c0b5f9" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="Test case.gtype" StoragePath="Test case.gtype\Test case.gtype" />
 					<SourceFileReference Id="ea4f8f8d2a5941909369a76033ad4b4e" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Parse test case.gvi" StoragePath="Parse test case.gvi" />
+					<SourceFileReference Bindings="EnvoyManager" Id="2e884f3208c343da8ddff116dbb599dd" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="Test case friendly description.gtype" StoragePath="Test case friendly description.gtype\Test case friendly description.gtype" />
+					<SourceFileReference Bindings="ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,{http://www.ni.com/SystemDesigner/EnvoyManagement}ProcessBackedEnvoyServiceMetaFactory" Id="98a5e4b857584e869a9ce4c9eaa73402" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Read test cases friendly description.gvi" StoragePath="Read test cases friendly description.gvi" />
+					<SourceFileReference Id="4d01da374ce949f1b1da465bcbff8c9c" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Trim and should filter line.gvi" StoragePath="Trim and should filter line.gvi" />
 				</NameScopingEnvoy>
 			</NameScopingEnvoy>
 		</EmbeddedDefinitionReference>

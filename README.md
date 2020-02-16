@@ -18,6 +18,6 @@ Make probabilities more intuitive by converting them to odds. (i.e. 72.3% become
 
 **Rust**: on crates.io as [friendly_probability_to_string](https://crates.io/crates/probability_to_friendly_string), requires 2018 edition or later
 
-**LabVIEW NXG**: requires [LabVIEW NXG](https://ni.com/labview) 3.0 or later
+**LabVIEW NXG**: requires [LabVIEW NXG](https://ni.com/labview) 4.0 or later
 
 This project was inspired by [FiveThirtyEight's 2018 house forecast](https://projects.fivethirtyeight.com/2018-midterm-election-forecast/house/), where they use this friendlier way of showing probabilities.  I decided to reverse-engineer the algorithm they used and make it easily available to incorporate in other visualizations, etc.  The qualitative descriptions are from the [New York Times live election results in 2020](https://www.nytimes.com/interactive/2020/02/03/us/elections/results-iowa-caucus-live-forecast.html).

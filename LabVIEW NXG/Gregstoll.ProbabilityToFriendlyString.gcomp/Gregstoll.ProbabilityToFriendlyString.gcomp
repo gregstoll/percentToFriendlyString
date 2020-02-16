@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="CDEF97614FD8027351E6ABFFC5490DE5EFB8337036ADE3A9DF9C2C1D1CEBB1C2BE3E57AF7981E875ED47C79FA4ED8DB7C8DD138375E6F9CA7AF9B58A53A90A49" Timestamp="1D4D5523C30C49F" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="C29AF547DBA54C6619399D613DD54E227849516066C52532BF37574E04B27B31DA219D428CC8EF680A5BD7CB2A52EFB39BEC69AF06064940A8298B90049D9BCC" Timestamp="1D5E37DC9EBE4DA" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
-		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="GComponentFeatureSet" Name="http://www.ni.com/GComponent.xsd" OldestCompatibleVersion="6.1.0.1" Version="6.2.0.49152" />
-		<ParsableNamespace AssemblyFileVersion="6.4.0.49213" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="6.2.0.49154" Version="6.2.0.49154" />
-		<ApplicationVersionInfo Build="6.4.0.49213" Name="LabVIEW NXG" Version="3.1.0" />
+		<ParsableNamespace AssemblyFileVersion="7.1.0.50148" FeatureSetName="GComponentFeatureSet" Name="http://www.ni.com/GComponent.xsd" OldestCompatibleVersion="7.1.0.49152" Version="7.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="7.1.0.50148" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="7.1.0.49153" Version="7.1.0.49153" />
+		<ApplicationVersionInfo Build="7.1.0.50148" Name="LabVIEW NXG" Version="4.0.0" />
 	</SourceModelFeatureSet>
 	<ComponentDefinition DefaultConfigurationName="Configuration1" Id="2f745e903cc648e3bbc3d21a7cb58c3a" RootNamespaceId="8c7496e2adc7487aaed7dcc76b0ffd72" xmlns="http://www.ni.com/GComponent.xsd">
 		<Icon Id="1c1b3ed353f74d1ea68237e349a4c832" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
@@ -15,10 +15,11 @@
 		<ComponentConfiguration Id="479075e8dd9246909653e57c1b700615" Name="Configuration1">
 			<CompilerSymbolTable Id="bf9081537a1e4d948a93e4889bd436e5" xmlns="http://www.ni.com/PlatformFramework" />
 			<ComponentItemProperties AssociatedEnvoyId="e6ee0539944a4cfa9da5c6a288906fb2" Exported="True" Id="c81630d580845198bf4d3571c676aad" />
+			<ComponentItemProperties AssociatedEnvoyId="c0e3bdabc9c4120ab6b5f3c81774e3e" Exported="True" Id="314466de10bd4c7ebf8009a91692d399" />
 		</ComponentConfiguration>
 	</ComponentDefinition>
 	<EnvoyManagerFile Id="cf0ec0e27c20470baffb20ad88952a18" xmlns="http://www.ni.com/PlatformFramework">
-		<ProjectSettings Id="b279629d49864a82b0be81210f8b1567" ModelDefinitionType="ProjectSettings" Name="ZProjectSettings" />
+		<EnvoyManagerRootEnvoy Id="b279629d49864a82b0be81210f8b1567" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
 		<EmbeddedDefinitionReference Id="be6c5a9f273c4bbabdd4723501f9cc16" ModelDefinitionType="{http://www.ni.com/GComponent.xsd}ComponentDefinitionEnvoyHierarchyRoot" Name="Global namespace">
 			<ComponentDefinitionEnvoyHierarchyRoot xmlns="http://www.ni.com/GComponent.xsd" />
 			<NameScopingEnvoy AutomaticallyResolveUp="True" Id="5459360845984edcae610ab8d58c8e99" Name="Gregstoll">
@@ -26,6 +27,7 @@
 					<SourceFileReference Bindings="EnvoyManager" Id="e6ee0539944a4cfa9da5c6a288906fb2" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="Friendly probability.gtype" StoragePath="Friendly probability.gtype\Friendly probability.gtype" />
 					<SourceFileReference Bindings="EnvoyManager" Id="571a4b0a772f4e5ba309ff213a444bb8" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="Friendly fraction.gtype" StoragePath="Friendly fraction.gtype\Friendly fraction.gtype" />
 					<SourceFileReference Id="53b9981ea23f42a8b3dfbf42aedea565" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Binary Search 1D Array (friendly fraction).gvi" StoragePath="Binary Search 1D Array (friendly fraction).gvi" />
+					<SourceFileReference Id="c0e3bdabc9c4120ab6b5f3c81774e3e" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Binary Search 1D Array.gvi" StoragePath="Binary Search 1D Array.gvi" />
 				</NameScopingEnvoy>
 			</NameScopingEnvoy>
 		</EmbeddedDefinitionReference>
