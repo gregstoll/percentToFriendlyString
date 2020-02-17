@@ -21,3 +21,5 @@ Make probabilities more intuitive by converting them to odds. (i.e. 72.3% become
 **LabVIEW NXG**: requires [LabVIEW NXG](https://ni.com/labview) 4.0 or later
 
 This project was inspired by [FiveThirtyEight's 2018 house forecast](https://projects.fivethirtyeight.com/2018-midterm-election-forecast/house/), where they use this friendlier way of showing probabilities.  I decided to reverse-engineer the algorithm they used and make it easily available to incorporate in other visualizations, etc.  The qualitative descriptions are from the [New York Times live election results in 2020](https://www.nytimes.com/interactive/2020/02/03/us/elections/results-iowa-caucus-live-forecast.html).
+
+Posts about this project: [original release](https://gregstoll.wordpress.com/2018/08/31/probabilitytofriendlystring-for-javascript-python-c/), [after adding qualitative descriptions and a bunch of languages](https://gregstoll.wordpress.com/2020/02/16/probabilitytofriendlystring-with-qualitiative-descriptions-and-in-8-languages/)
