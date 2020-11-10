@@ -77,12 +77,12 @@ impl FriendlyProbability {
         // use slice::binary_search_by
         // because f32's are not orderable
         // https://stackoverflow.com/questions/28247990/how-to-do-a-binary-search-on-a-vec-of-floats
-        let friendly_description_location = FRIENDLY_DESCRIPTION_VALUES.binary_search_by(|f| {
-            f.partial_cmp(&probability).expect("Couldn't compare floats?")
+        let friendly_description_location = FRIENDLY_DESCRIPTIONS.binary_search_by(|f| {
+            f.0.partial_cmp(&probability).expect("Couldn't compare floats?")
         });
         let friendly_description = String::from(match friendly_description_location {
-            Ok(i) => FRIENDLY_DESCRIPTION_STRINGS[i],
-            Err(i) => FRIENDLY_DESCRIPTION_STRINGS[i - 1]
+            Ok(i) => FRIENDLY_DESCRIPTIONS[i].1,
+            Err(i) => FRIENDLY_DESCRIPTIONS[i - 1].1
         });
         if probability == 0.0 {
             return FriendlyProbability::new(0, 1, friendly_description, None)
@@ -151,6 +151,22 @@ impl Fraction {
         }
     }
 }
+const FRIENDLY_DESCRIPTIONS : [(f32, &str); 14] = [
+    (0.0, "Hard to imagine"),
+    (0.005, "Barely possible"),
+    (0.02, "Still possible"),
+    (0.08, "Some chance"),
+    (0.15, "Could happen"),
+    (0.2, "Perhaps"),
+    (0.45, "Flip a coin"),
+    (0.55, "Likelier than not"),
+    (0.7, "Good chance"),
+    (0.8, "Probably"),
+    (0.85, "Quite likely"),
+    (0.9, "Pretty likely"),
+    (0.95, "Very likely"),
+    (0.995, "Almost certainly"),
+];
 
 lazy_static! {
     static ref FRACTION_DATA: Vec<Fraction> = {
@@ -179,23 +195,6 @@ lazy_static! {
         fractions.sort_unstable_by(|a,b| a.partial_cmp(b).unwrap());
         fractions
     };
-    static ref FRIENDLY_DESCRIPTION_VALUES: [f32; 14] = [0.0, 0.005, 0.02, 0.08, 0.15, 0.2, 0.45, 0.55, 0.7, 0.8, 0.85, 0.9, 0.95, 0.995];
-    static ref FRIENDLY_DESCRIPTION_STRINGS: [&'static str; 14] = [
-		"Hard to imagine",
-		"Barely possible",
-		"Still possible",
-		"Some chance",
-		"Could happen",
-		"Perhaps",
-		"Flip a coin",
-		"Likelier than not",
-		"Good chance",
-		"Probably",
-		"Quite likely",
-		"Pretty likely",
-		"Very likely",
-		"Almost certainly"
-    ];
 }
 
 #[cfg(test)]
