@@ -9,7 +9,7 @@ extern crate lazy_static;
 pub struct FriendlyProbability {
     numerator: u8,
     denominator: u8,
-    friendly_description: String,
+    friendly_description: &'static str,
     friendly_string: String
 }
 
@@ -21,7 +21,7 @@ impl fmt::Display for FriendlyProbability {
 impl FriendlyProbability {
     // http://xion.io/post/code/rust-optional-args.html
     /// Create a new FriendlyProbability.  Most of the time you will want to use `from_probability()` instead.
-    pub fn new<T: Into<Option<String>>>(numerator: u8, denominator: u8, friendly_description: String, friendly_string: T) -> FriendlyProbability {
+    pub fn new<T: Into<Option<String>>>(numerator: u8, denominator: u8, friendly_description: &'static str, friendly_string: T) -> FriendlyProbability {
         let real_friendly_string = friendly_string.into().unwrap_or_else(|| format!("{} in {}", numerator, denominator));
         FriendlyProbability {
             numerator,
@@ -80,10 +80,10 @@ impl FriendlyProbability {
         let friendly_description_location = FRIENDLY_DESCRIPTIONS.binary_search_by(|f| {
             f.0.partial_cmp(&probability).expect("Couldn't compare floats?")
         });
-        let friendly_description = String::from(match friendly_description_location {
+        let friendly_description = match friendly_description_location {
             Ok(i) => FRIENDLY_DESCRIPTIONS[i].1,
             Err(i) => FRIENDLY_DESCRIPTIONS[i - 1].1
-        });
+        };
         if probability == 0.0 {
             return FriendlyProbability::new(0, 1, friendly_description, None)
         }
@@ -104,7 +104,7 @@ impl FriendlyProbability {
         let location = data.binary_search_by(|f| {
             f.partial_cmp(&fraction_to_compare).expect("Couldn't compare values?")
         });
-        fn friendly_probability_from_fraction(fraction: &Fraction, friendly_description: String) -> FriendlyProbability {
+        fn friendly_probability_from_fraction(fraction: &Fraction, friendly_description: &'static str) -> FriendlyProbability {
             FriendlyProbability::new(fraction.numerator, fraction.denominator, friendly_description, None)
         }
         let data_len = data.len();
@@ -203,13 +203,13 @@ mod tests {
 
     #[test]
     fn friendly_probability_string_matches_numeric_inputs() {
-        let fp = FriendlyProbability::new(1, 2, "".to_string(), None);
+        let fp = FriendlyProbability::new(1, 2, "", None);
         assert_eq!("1 in 2", fp.friendly_string);
     }
     #[test]
     fn friendly_probability_string_matches_string_input() {
         let s = String::from("something weird");
-        let fp = FriendlyProbability::new(1, 2, "".to_string(), s.clone());
+        let fp = FriendlyProbability::new(1, 2, "", s.clone());
         assert_eq!(s, fp.friendly_string);
     }
     #[test]
