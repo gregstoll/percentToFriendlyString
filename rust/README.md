@@ -1,6 +1,6 @@
 Published as [probability_to_friendly_string](https://crates.io/crates/probability_to_friendly_string) crate.
 
-Requires Ruby 2018 edition
+Requires Rust 2018 edition
 
 Usage:
 ```rust
